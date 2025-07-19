@@ -124,9 +124,9 @@ const Solutions = () => {
       <div className="container mx-auto px-6 space-y-20">
         
         {/* Flexible Delivery Models */}
-        <section className="min-h-screen">
+        <section className="min-h-screen flex flex-col justify-center py-20">
           {/* Desktop Two-Column Layout */}
-          <div className="hidden md:flex gap-12 h-screen">
+          <div className="hidden md:flex gap-12 items-center">
             {/* Left Column - Title and Description */}
             <div className="w-2/5 flex items-center justify-center">
               <div className="max-w-md">
