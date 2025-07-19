@@ -76,7 +76,7 @@ const Index = () => {
           
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground">
-            The premier <span className="font-serif italic font-normal">AI infrastructure</span> partner in Latin America
+            The premier <span className="font-serif italic font-normal" style={{fontFamily: 'Times, "Times New Roman", serif'}}>AI infrastructure</span> partner in Latin America
           </h1>
           
           {/* Subtitle */}
