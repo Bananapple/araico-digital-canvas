@@ -140,7 +140,7 @@ const Solutions = () => {
             </div>
             
             {/* Right Column - Cards */}
-            <div className="w-3/5">
+            <div className="w-3/5 -mt-32">
               <div className="grid gap-6">
                 {deliveryModels.map((model, index) => (
                   <Card key={index} className="bg-card border-gray-300 hover-lift scale-90">
