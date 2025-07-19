@@ -124,7 +124,7 @@ const Solutions = () => {
         
         {/* Flexible Delivery Models */}
         <section>
-          <h2 className="text-3xl font-bold text-center mb-12 text-black">
+          <h2 className="text-3xl font-bold text-center mb-12 text-black tracking-tight">
             FLEXIBLE DELIVERY MODELS
           </h2>
           
@@ -180,7 +180,7 @@ const Solutions = () => {
 
         {/* Industries We Target */}
         <section>
-          <h2 className="text-3xl font-bold text-center mb-12 text-black">
+          <h2 className="text-3xl font-bold text-center mb-12 text-black tracking-tight">
             INDUSTRIES WE TARGET
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -204,7 +204,7 @@ const Solutions = () => {
 
         {/* Why Araico */}
         <section>
-          <h2 className="text-3xl font-bold text-center mb-12 text-black">
+          <h2 className="text-3xl font-bold text-center mb-12 text-black tracking-tight">
             WHY ARAICO?
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
