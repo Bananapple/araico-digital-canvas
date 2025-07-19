@@ -140,7 +140,7 @@ const Solutions = () => {
             
             {/* Right Column - 60% width, Scrollable */}
             <div className="w-3/5 h-full overflow-y-auto scrollbar-hide">
-              <div className="pt-40">
+              <div className="pt-32">
                 {deliveryModels.map((model, index) => (
                   <div key={index} className="flex items-center justify-center">
                     <Card className="w-4/5 max-w-2xl bg-card border-gray-300 transform scale-75 -my-8">
