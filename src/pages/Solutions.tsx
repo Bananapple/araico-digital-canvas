@@ -204,7 +204,7 @@ const Solutions = () => {
               </div>
               
               {/* Scroll Tracker */}
-              <div className="absolute right-6 top-1/2 transform -translate-y-1/2 flex flex-col space-y-3">
+              <div className="fixed right-8 top-1/2 transform -translate-y-1/2 flex flex-col space-y-3 z-20">
                 {deliveryModels.map((_, index) => (
                   <div
                     key={index}
