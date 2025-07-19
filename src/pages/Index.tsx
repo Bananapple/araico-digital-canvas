@@ -5,10 +5,12 @@ const Index = () => {
   return (
     <div className="min-h-screen overflow-hidden bg-background relative">
       {/* Animated Wave Background Effect */}
-      <div className="fixed inset-0 z-0 overflow-hidden">
-        <div className="absolute top-1/4 left-0 w-96 h-96 bg-orange-500/30 rounded-full blur-3xl" style={{ animation: 'wave 6s linear infinite', clipPath: 'ellipse(200px 100px at center)' }}></div>
-        <div className="absolute top-1/2 left-0 w-80 h-80 bg-amber-500/25 rounded-full blur-2xl" style={{ animation: 'wave 8s linear infinite', animationDelay: '2s', clipPath: 'ellipse(180px 90px at center)' }}></div>
-        <div className="absolute bottom-1/4 left-0 w-72 h-72 bg-orange-400/30 rounded-full blur-3xl" style={{ animation: 'wave 10s linear infinite', animationDelay: '4s', clipPath: 'ellipse(160px 80px at center)' }}></div>
+      <div className="fixed inset-0 -z-10 overflow-hidden">
+        <div className="wave-container">
+          <div className="wave wave1"></div>
+          <div className="wave wave2"></div>
+          <div className="wave wave3"></div>
+        </div>
       </div>
       
       <Header />
