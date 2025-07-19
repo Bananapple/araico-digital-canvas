@@ -130,7 +130,7 @@ const Solutions = () => {
           </h2>
           
           {/* Desktop Two-Column Layout */}
-          <div className="hidden lg:block">
+          <div className="hidden md:block">
             <div className="flex min-h-screen">
               {/* Left Column - 40% width, Sticky */}
               <div className="w-2/5 pr-12">
@@ -176,40 +176,6 @@ const Solutions = () => {
                   ))}
                 </div>
               </div>
-            </div>
-          </div>
-
-          {/* Tablet Layout */}
-          <div className="hidden md:block lg:hidden">
-            <div className="space-y-6">
-              {deliveryModels.map((model, index) => (
-                <Card key={index} className="bg-card border-gray-300 hover-lift">
-                  <CardHeader>
-                    <CardTitle className="text-xl text-primary font-bold">{model.model}</CardTitle>
-                    <div className="mt-4 space-y-2">
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm font-medium text-foreground">Client Control</span>
-                        <span className="text-sm text-muted-foreground">{index + 1}/5</span>
-                      </div>
-                      <Progress value={(index + 1) * 20} className="h-2" />
-                    </div>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div>
-                      <p className="text-sm font-semibold text-foreground mb-1">We Provide:</p>
-                      <p className="text-sm text-muted-foreground">{model.weProvide}</p>
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold text-foreground mb-1">You Manage:</p>
-                      <p className="text-sm text-muted-foreground">{model.youManage}</p>
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold text-foreground mb-1">Best For:</p>
-                      <p className="text-sm text-muted-foreground">{model.bestFor}</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
             </div>
           </div>
 
