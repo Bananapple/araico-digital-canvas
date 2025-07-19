@@ -143,7 +143,7 @@ const Solutions = () => {
             <div className="w-3/5 -mt-12">
               <div className="grid gap-6">
                 {deliveryModels.map((model, index) => (
-                  <Card key={index} className="bg-card border-gray-300 hover-lift scale-90">
+                  <Card key={index} className="bg-card border-gray-300 scale-75">
                     <CardHeader className="pb-1">
                       <CardTitle className="text-xl text-primary font-bold mb-2">{model.model}</CardTitle>
                     </CardHeader>
