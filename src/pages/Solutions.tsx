@@ -141,9 +141,9 @@ const Solutions = () => {
             
             {/* Right Column - Cards */}
             <div className="w-3/5 -mt-12">
-              <div className="grid gap-6">
+              <div className="grid gap-2">
                 {deliveryModels.map((model, index) => (
-                  <Card key={index} className="bg-card border-gray-300 hover-lift scale-90">
+                  <Card key={index} className="bg-card border-gray-300 scale-75">
                     <CardHeader className="pb-1">
                       <CardTitle className="text-xl text-primary font-bold mb-2">{model.model}</CardTitle>
                     </CardHeader>
@@ -182,9 +182,9 @@ const Solutions = () => {
               Choose the perfect infrastructure model that matches your control requirements and operational preferences.
             </p>
             
-            <div className="grid gap-6 max-w-4xl mx-auto">
+            <div className="grid gap-2 max-w-4xl mx-auto">
               {deliveryModels.map((model, index) => (
-                <Card key={index} className="bg-card border-gray-300 hover-lift">
+                <Card key={index} className="bg-card border-gray-300 scale-75">
                   <CardHeader className="pb-2">
                     <CardTitle className="text-2xl text-primary font-bold mb-4">{model.model}</CardTitle>
                   </CardHeader>
