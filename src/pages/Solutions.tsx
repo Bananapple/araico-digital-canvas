@@ -232,16 +232,16 @@ const Solutions = () => {
             
             {/* Right Column - Cards */}
             <div className="w-3/5">
-              <div className="grid gap-1">
+              <div className="grid gap-3">
                 {industries.map((industry, index) => (
-                  <Card key={index} className="bg-card border-gray-300 scale-75 -my-8 text-center">
-                    <CardHeader className="pb-1 p-4">
+                  <Card key={index} className="bg-card border-gray-300 text-center">
+                    <CardHeader className="pb-2 p-3">
                       <div className="mx-auto w-12 h-12 rounded-full bg-gradient-primary flex items-center justify-center mb-2">
                         <industry.icon className="w-6 h-6 text-white" />
                       </div>
-                      <CardTitle className="text-lg text-primary font-bold text-center">{industry.title}</CardTitle>
+                      <CardTitle className="text-lg text-primary font-bold">{industry.title}</CardTitle>
                     </CardHeader>
-                    <CardContent className="pt-0 p-4 text-center">
+                    <CardContent className="pt-0 p-3">
                       <CardDescription className="text-sm text-muted-foreground">
                         {industry.description}
                       </CardDescription>
@@ -261,16 +261,16 @@ const Solutions = () => {
               Specialized infrastructure solutions for AI-driven organizations and enterprises.
             </p>
             
-            <div className="grid gap-1 max-w-4xl mx-auto">
+            <div className="grid gap-3 max-w-4xl mx-auto">
               {industries.map((industry, index) => (
-                <Card key={index} className="bg-card border-gray-300 scale-75 -my-8 text-center">
-                  <CardHeader className="pb-1 p-4">
+                <Card key={index} className="bg-card border-gray-300 text-center">
+                  <CardHeader className="pb-2 p-3">
                     <div className="mx-auto w-12 h-12 rounded-full bg-gradient-primary flex items-center justify-center mb-2">
                       <industry.icon className="w-6 h-6 text-white" />
                     </div>
-                    <CardTitle className="text-lg text-primary font-bold text-center">{industry.title}</CardTitle>
+                    <CardTitle className="text-lg text-primary font-bold">{industry.title}</CardTitle>
                   </CardHeader>
-                  <CardContent className="pt-0 p-4 text-center">
+                  <CardContent className="pt-0 p-3">
                     <CardDescription className="text-sm text-muted-foreground">
                       {industry.description}
                     </CardDescription>
@@ -299,16 +299,16 @@ const Solutions = () => {
             
             {/* Right Column - Cards */}
             <div className="w-3/5">
-              <div className="grid gap-1">
+              <div className="grid gap-3">
                 {whyAraico.map((item, index) => (
-                  <Card key={index} className="bg-card border-gray-300 scale-75 -my-8 text-center">
-                    <CardHeader className="pb-1 p-4">
+                  <Card key={index} className="bg-card border-gray-300 text-center">
+                    <CardHeader className="pb-2 p-3">
                       <div className="mx-auto w-12 h-12 rounded-full bg-gradient-primary flex items-center justify-center mb-2">
                         <item.icon className="w-6 h-6 text-white" />
                       </div>
-                      <CardTitle className="text-lg text-primary font-bold text-center">{item.title}</CardTitle>
+                      <CardTitle className="text-lg text-primary font-bold">{item.title}</CardTitle>
                     </CardHeader>
-                    <CardContent className="pt-0 p-4 text-center">
+                    <CardContent className="pt-0 p-3">
                       <CardDescription className="text-sm text-muted-foreground">
                         {item.description}
                       </CardDescription>
@@ -328,16 +328,16 @@ const Solutions = () => {
               Strategic advantages that make Paraguay the ideal location for your data center infrastructure.
             </p>
             
-            <div className="grid gap-1 max-w-4xl mx-auto">
+            <div className="grid gap-3 max-w-4xl mx-auto">
               {whyAraico.map((item, index) => (
-                <Card key={index} className="bg-card border-gray-300 scale-75 -my-8 text-center">
-                  <CardHeader className="pb-1 p-4">
+                <Card key={index} className="bg-card border-gray-300 text-center">
+                  <CardHeader className="pb-2 p-3">
                     <div className="mx-auto w-12 h-12 rounded-full bg-gradient-primary flex items-center justify-center mb-2">
                       <item.icon className="w-6 h-6 text-white" />
                     </div>
-                    <CardTitle className="text-lg text-primary font-bold text-center">{item.title}</CardTitle>
+                    <CardTitle className="text-lg text-primary font-bold">{item.title}</CardTitle>
                   </CardHeader>
-                  <CardContent className="pt-0 p-4 text-center">
+                  <CardContent className="pt-0 p-3">
                     <CardDescription className="text-sm text-muted-foreground">
                       {item.description}
                     </CardDescription>
