@@ -124,15 +124,15 @@ const Solutions = () => {
         
         {/* Flexible Delivery Models */}
         <section>
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gradient">
+          <h2 className="text-3xl font-bold text-center mb-12 text-black">
             FLEXIBLE DELIVERY MODELS
           </h2>
           
           {/* Desktop Table */}
-          <div className="hidden md:block bg-card rounded-lg border border-border shadow-card overflow-hidden">
+          <div className="hidden md:block bg-card rounded-lg border border-gray-300 shadow-card overflow-hidden">
             <Table>
               <TableHeader>
-                <TableRow className="border-border bg-muted/30">
+                <TableRow className="border-gray-300 bg-muted/30">
                   <TableHead className="font-bold text-foreground">Model</TableHead>
                   <TableHead className="font-bold text-foreground">We Provide</TableHead>
                   <TableHead className="font-bold text-foreground">You Manage</TableHead>
@@ -141,7 +141,7 @@ const Solutions = () => {
               </TableHeader>
               <TableBody>
                 {deliveryModels.map((model, index) => (
-                  <TableRow key={index} className="border-border hover:bg-muted/20 transition-colors">
+                  <TableRow key={index} className="border-gray-300 hover:bg-muted/20 transition-colors">
                     <TableCell className="font-medium text-primary">{model.model}</TableCell>
                     <TableCell className="text-muted-foreground">{model.weProvide}</TableCell>
                     <TableCell className="text-muted-foreground">{model.youManage}</TableCell>
@@ -155,7 +155,7 @@ const Solutions = () => {
           {/* Mobile Cards */}
           <div className="md:hidden space-y-4">
             {deliveryModels.map((model, index) => (
-              <Card key={index} className="bg-card border-border shadow-card hover-lift">
+              <Card key={index} className="bg-card border-gray-300 shadow-card hover-lift">
                 <CardHeader>
                   <CardTitle className="text-primary">{model.model}</CardTitle>
                 </CardHeader>
@@ -180,12 +180,12 @@ const Solutions = () => {
 
         {/* Industries We Target */}
         <section>
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gradient">
+          <h2 className="text-3xl font-bold text-center mb-12 text-black">
             INDUSTRIES WE TARGET
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {industries.map((industry, index) => (
-              <Card key={index} className="bg-card border-border shadow-card hover-lift text-center">
+              <Card key={index} className="bg-card border-gray-300 shadow-card hover-lift text-center">
                 <CardHeader>
                   <div className="mx-auto w-16 h-16 rounded-full bg-gradient-primary flex items-center justify-center mb-4">
                     <industry.icon className="w-8 h-8 text-white" />
@@ -204,12 +204,12 @@ const Solutions = () => {
 
         {/* Why Araico */}
         <section>
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gradient">
+          <h2 className="text-3xl font-bold text-center mb-12 text-black">
             WHY ARAICO?
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {whyAraico.map((item, index) => (
-              <Card key={index} className="bg-card border-border shadow-card hover-lift text-center">
+              <Card key={index} className="bg-card border-gray-300 shadow-card hover-lift text-center">
                 <CardHeader>
                   <div className="mx-auto w-16 h-16 rounded-full bg-gradient-primary flex items-center justify-center mb-4">
                     <item.icon className="w-8 h-8 text-white" />
