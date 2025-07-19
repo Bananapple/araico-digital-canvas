@@ -129,7 +129,7 @@ const Solutions = () => {
           </h2>
           
           {/* Desktop Table */}
-          <div className="hidden md:block bg-card rounded-lg border border-gray-300 shadow-card overflow-hidden">
+          <div className="hidden md:block bg-card rounded-lg border border-gray-300 overflow-hidden">
             <Table>
               <TableHeader>
                 <TableRow className="border-gray-300 bg-muted/30">
@@ -155,7 +155,7 @@ const Solutions = () => {
           {/* Mobile Cards */}
           <div className="md:hidden space-y-4">
             {deliveryModels.map((model, index) => (
-              <Card key={index} className="bg-card border-gray-300 shadow-card hover-lift">
+              <Card key={index} className="bg-card border-gray-300 hover-lift">
                 <CardHeader>
                   <CardTitle className="text-primary">{model.model}</CardTitle>
                 </CardHeader>
@@ -185,7 +185,7 @@ const Solutions = () => {
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {industries.map((industry, index) => (
-              <Card key={index} className="bg-card border-gray-300 shadow-card hover-lift text-center">
+              <Card key={index} className="bg-card border-gray-300 hover-lift text-center">
                 <CardHeader>
                   <div className="mx-auto w-16 h-16 rounded-full bg-gradient-primary flex items-center justify-center mb-4">
                     <industry.icon className="w-8 h-8 text-white" />
@@ -209,7 +209,7 @@ const Solutions = () => {
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {whyAraico.map((item, index) => (
-              <Card key={index} className="bg-card border-gray-300 shadow-card hover-lift text-center">
+              <Card key={index} className="bg-card border-gray-300 hover-lift text-center">
                 <CardHeader>
                   <div className="mx-auto w-16 h-16 rounded-full bg-gradient-primary flex items-center justify-center mb-4">
                     <item.icon className="w-8 h-8 text-white" />
