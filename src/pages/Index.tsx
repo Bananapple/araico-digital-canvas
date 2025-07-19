@@ -10,23 +10,18 @@ const Index = () => {
         <div className="text-center space-y-8 max-w-4xl mx-auto px-6">
           
           {/* Main Heading */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight">
-            <span className="text-gradient">DIGITAL</span>
-            <br />
-            <span className="text-foreground">INFRASTRUCTURE</span>
-            <br />
-            <span className="text-gradient">REDEFINED</span>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground">
+            The Americas premier AI infrastructure partner
           </h1>
           
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Enabling flexible, scalable, and sustainable data centers with excellence 
-            through reliable and high-quality solutions.
+            Harnessing LATAM's strategic position and access to the world's largest renewable energy resources to build the AI factories of tomorrow
           </p>
           
           {/* Call to Action */}
           <div className="pt-8">
-            <button className="gradient-primary hover:gradient-hover text-white px-8 py-4 rounded-xl text-lg font-medium hover-lift border-0 shadow-glow">
+            <button className="bg-foreground text-background hover:bg-foreground/90 rounded-full px-8 py-4 text-lg font-medium hover-lift border-0">
               EXPLORE SOLUTIONS
             </button>
           </div>
@@ -38,6 +33,13 @@ const Index = () => {
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-araico-purple/10 rounded-full blur-3xl"></div>
         </div>
       </div>
+      
+      {/* Footer */}
+      <footer className="absolute bottom-0 left-0 right-0 py-6 text-center">
+        <p className="text-muted-foreground text-sm">
+          Araico Inc, all rights reserved.
+        </p>
+      </footer>
     </div>
   );
 };
