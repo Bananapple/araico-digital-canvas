@@ -3,16 +3,17 @@ import Header from "@/components/Header";
 
 const Index = () => {
   return (
-    <div className="min-h-screen overflow-hidden relative">
+    <div className="min-h-screen overflow-hidden relative bg-gradient-to-br from-orange-50 via-white to-amber-50">
       
-      {/* Static Wave Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-orange-400 via-amber-300 to-orange-200">
-        <div 
-          className="absolute inset-0 bg-gradient-to-r from-orange-500/30 via-transparent to-orange-300/20"
-          style={{
-            clipPath: 'polygon(0 0, 100% 0, 100% 85%, 0 100%)'
-          }}
-        />
+      {/* Wave Line Divider */}
+      <div className="absolute inset-0 pointer-events-none">
+        <svg className="absolute top-1/3 left-0 w-full h-32" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path 
+            d="M0,60 C300,20 600,100 900,60 C1050,40 1150,80 1200,60 L1200,120 L0,120 Z"
+            fill="#ff6b35"
+            opacity="0.8"
+          />
+        </svg>
       </div>
       
       <Header />
