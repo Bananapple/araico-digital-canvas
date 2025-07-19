@@ -105,7 +105,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <Card className="bg-card border-border shadow-card">
+          <Card className="bg-card border-gray-300">
             <CardHeader>
               <CardTitle className="text-2xl text-center text-foreground">
                 Get in Touch
