@@ -128,8 +128,8 @@ const Solutions = () => {
           {/* Desktop Two-Column Layout */}
           <div className="hidden md:flex gap-12">
             {/* Left Column - Title and Description */}
-            <div className="w-2/5 flex items-start justify-center">
-              <div className="max-w-md pt-8">
+            <div className="w-2/5 flex items-center justify-center">
+              <div className="max-w-md">
                 <h2 className="text-5xl text-black tracking-tight mb-8">
                   <span style={{fontFamily: 'Times, "Times New Roman", serif'}} className="italic font-normal">Flexible delivery models</span> <span className="font-bold">adapted to your needs</span>
                 </h2>
@@ -143,28 +143,28 @@ const Solutions = () => {
             <div className="w-3/5">
               <div className="grid gap-6">
                 {deliveryModels.map((model, index) => (
-                  <Card key={index} className="bg-card border-gray-300 hover-lift">
-                    <CardHeader className="pb-2">
-                      <CardTitle className="text-2xl text-primary font-bold mb-4">{model.model}</CardTitle>
+                  <Card key={index} className="bg-card border-gray-300 hover-lift scale-90">
+                    <CardHeader className="pb-1">
+                      <CardTitle className="text-xl text-primary font-bold mb-2">{model.model}</CardTitle>
                     </CardHeader>
-                    <CardContent className="space-y-6 pt-0">
+                    <CardContent className="space-y-4 pt-0">
                       <div>
-                        <p className="text-base font-semibold text-foreground mb-2">We Provide:</p>
-                        <p className="text-base text-muted-foreground leading-relaxed">{model.weProvide}</p>
+                        <p className="text-sm font-semibold text-foreground mb-1">We Provide:</p>
+                        <p className="text-sm text-muted-foreground leading-relaxed">{model.weProvide}</p>
                       </div>
                       <div>
-                        <p className="text-base font-semibold text-foreground mb-2">You Manage:</p>
-                        <p className="text-base text-muted-foreground leading-relaxed">{model.youManage}</p>
+                        <p className="text-sm font-semibold text-foreground mb-1">You Manage:</p>
+                        <p className="text-sm text-muted-foreground leading-relaxed">{model.youManage}</p>
                       </div>
                       <div>
-                        <p className="text-base font-semibold text-foreground mb-2">Best For:</p>
-                        <p className="text-base text-muted-foreground leading-relaxed">{model.bestFor}</p>
+                        <p className="text-sm font-semibold text-foreground mb-1">Best For:</p>
+                        <p className="text-sm text-muted-foreground leading-relaxed">{model.bestFor}</p>
                       </div>
-                      <div className="mt-4">
-                        <div className="mb-2">
-                          <span className="text-base font-medium text-foreground">Client Control</span>
+                      <div className="mt-3">
+                        <div className="mb-1">
+                          <span className="text-sm font-medium text-foreground">Client Control</span>
                         </div>
-                        <Progress value={(index + 1) * 20} className="h-3" />
+                        <Progress value={(index + 1) * 20} className="h-2" />
                       </div>
                     </CardContent>
                   </Card>
