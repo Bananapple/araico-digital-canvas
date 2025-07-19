@@ -127,7 +127,7 @@ const Solutions = () => {
           {/* Desktop Two-Column Layout */}
           <div className="hidden md:flex h-full">
             {/* Left Column - 40% width, Fixed */}
-            <div className="w-2/5 h-full flex items-center justify-center px-12 bg-background">
+            <div className="w-2/5 h-full flex items-center justify-center px-12">
               <div className="max-w-md">
                 <h2 className="text-3xl text-black tracking-tight mb-8">
                   <span style={{fontFamily: 'Times, "Times New Roman", serif'}} className="italic font-normal">Flexible delivery models</span> adapted to your needs
@@ -139,11 +139,11 @@ const Solutions = () => {
             </div>
             
             {/* Right Column - 60% width, Scrollable */}
-            <div className="w-3/5 h-full overflow-y-auto">
+            <div className="w-3/5 h-full overflow-y-auto scrollbar-hide">
               <div className="space-y-0">
                 {deliveryModels.map((model, index) => (
                   <div key={index} className="h-screen flex items-center justify-center px-8">
-                    <Card className="w-4/5 max-w-2xl bg-card border-gray-300 hover-lift transform scale-75">
+                    <Card className="w-4/5 max-w-2xl bg-card border-gray-300 transform scale-75">
                       <CardHeader>
                         <CardTitle className="text-2xl text-primary font-bold mb-4">{model.model}</CardTitle>
                       </CardHeader>
