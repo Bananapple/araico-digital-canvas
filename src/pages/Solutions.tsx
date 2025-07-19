@@ -1,8 +1,35 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Cpu, Building, Globe, Leaf, MapPin, Zap } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 const Solutions = () => {
+  const [activeCard, setActiveCard] = useState(0);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const observers: IntersectionObserver[] = [];
+    
+    cardRefs.current.forEach((cardRef, index) => {
+      if (cardRef) {
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+              setActiveCard(index);
+            }
+          },
+          { threshold: 0.5, rootMargin: "-20% 0px -20% 0px" }
+        );
+        observer.observe(cardRef);
+        observers.push(observer);
+      }
+    });
+
+    return () => {
+      observers.forEach(observer => observer.disconnect());
+    };
+  }, []);
+
   const deliveryModels = [
     {
       model: "Powered Shell",
@@ -139,10 +166,14 @@ const Solutions = () => {
             </div>
             
             {/* Right Column - 60% width, Scrollable */}
-            <div className="w-3/5 h-full overflow-y-auto scrollbar-hide">
+            <div className="w-3/5 h-full overflow-y-auto scrollbar-hide relative">
               <div className="pt-44">
                 {deliveryModels.map((model, index) => (
-                  <div key={index} className="flex items-center justify-center">
+                  <div 
+                    key={index} 
+                    ref={el => cardRefs.current[index] = el}
+                    className="flex items-center justify-center"
+                  >
                     <Card className="w-4/5 max-w-2xl bg-card border-gray-300 transform scale-75 -my-8">
                         <CardHeader className="pb-2">
                           <CardTitle className="text-2xl text-primary font-bold mb-4">{model.model}</CardTitle>
@@ -169,6 +200,20 @@ const Solutions = () => {
                         </CardContent>
                     </Card>
                   </div>
+                ))}
+              </div>
+              
+              {/* Scroll Tracker */}
+              <div className="absolute right-6 top-1/2 transform -translate-y-1/2 flex flex-col space-y-3">
+                {deliveryModels.map((_, index) => (
+                  <div
+                    key={index}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      activeCard === index 
+                        ? 'bg-primary scale-125' 
+                        : 'bg-muted border-2 border-muted-foreground/30'
+                    }`}
+                  />
                 ))}
               </div>
             </div>
