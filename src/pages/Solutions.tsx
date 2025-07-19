@@ -129,49 +129,55 @@ const Solutions = () => {
           </h2>
           
           {/* Desktop Two-Column Layout */}
-          <div className="hidden lg:grid lg:grid-cols-5 gap-12 min-h-[600px]">
-            {/* Left Column - Sticky Header */}
-            <div className="col-span-2">
-              <div className="sticky top-20">
-                <h3 className="text-2xl font-bold text-foreground mb-4">
-                  ⚙️ Delivery Models Comparison
-                </h3>
-                <p className="text-muted-foreground">
-                  Choose the perfect infrastructure model that matches your control requirements and operational preferences.
-                </p>
+          <div className="hidden lg:block">
+            <div className="grid grid-cols-5 gap-12">
+              {/* Left Column - 40% width, Sticky */}
+              <div className="col-span-2">
+                <div className="sticky top-20 h-screen flex flex-col justify-center">
+                  <h3 className="text-4xl font-bold text-foreground mb-6">
+                    ⚙️ Delivery Models Comparison
+                  </h3>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Choose the perfect infrastructure model that matches your control requirements and operational preferences.
+                  </p>
+                </div>
               </div>
-            </div>
-            
-            {/* Right Column - Scrollable Cards */}
-            <div className="col-span-3 space-y-6">
-              {deliveryModels.map((model, index) => (
-                <Card key={index} className="bg-card border-gray-300 hover-lift">
-                  <CardHeader>
-                    <CardTitle className="text-xl text-primary font-bold">{model.model}</CardTitle>
-                    <div className="mt-4 space-y-2">
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm font-medium text-foreground">Client Control</span>
-                        <span className="text-sm text-muted-foreground">{index + 1}/5</span>
-                      </div>
-                      <Progress value={(index + 1) * 20} className="h-2" />
+              
+              {/* Right Column - 60% width, Scrollable */}
+              <div className="col-span-3">
+                <div className="space-y-8 py-20">
+                  {deliveryModels.map((model, index) => (
+                    <div key={index} className="min-h-screen flex items-center">
+                      <Card className="w-full bg-card border-gray-300 hover-lift">
+                        <CardHeader>
+                          <CardTitle className="text-2xl text-primary font-bold mb-4">{model.model}</CardTitle>
+                          <div className="space-y-3">
+                            <div className="flex justify-between items-center">
+                              <span className="text-base font-medium text-foreground">Client Control</span>
+                              <span className="text-base text-muted-foreground">{index + 1}/5</span>
+                            </div>
+                            <Progress value={(index + 1) * 20} className="h-3" />
+                          </div>
+                        </CardHeader>
+                        <CardContent className="space-y-6">
+                          <div>
+                            <p className="text-base font-semibold text-foreground mb-2">We Provide:</p>
+                            <p className="text-base text-muted-foreground leading-relaxed">{model.weProvide}</p>
+                          </div>
+                          <div>
+                            <p className="text-base font-semibold text-foreground mb-2">You Manage:</p>
+                            <p className="text-base text-muted-foreground leading-relaxed">{model.youManage}</p>
+                          </div>
+                          <div>
+                            <p className="text-base font-semibold text-foreground mb-2">Best For:</p>
+                            <p className="text-base text-muted-foreground leading-relaxed">{model.bestFor}</p>
+                          </div>
+                        </CardContent>
+                      </Card>
                     </div>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div>
-                      <p className="text-sm font-semibold text-foreground mb-1">We Provide:</p>
-                      <p className="text-sm text-muted-foreground">{model.weProvide}</p>
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold text-foreground mb-1">You Manage:</p>
-                      <p className="text-sm text-muted-foreground">{model.youManage}</p>
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold text-foreground mb-1">Best For:</p>
-                      <p className="text-sm text-muted-foreground">{model.bestFor}</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
 
