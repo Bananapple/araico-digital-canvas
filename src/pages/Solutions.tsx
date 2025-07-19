@@ -129,7 +129,7 @@ const Solutions = () => {
             {/* Left Column - 40% width, Fixed */}
             <div className="w-2/5 h-full flex items-center justify-center px-12">
               <div className="max-w-md">
-                  <h2 className="text-3xl text-black tracking-tight mb-8">
+                  <h2 className="text-4xl text-black tracking-tight mb-8">
                     <span style={{fontFamily: 'Times, "Times New Roman", serif'}} className="italic font-normal">Flexible delivery models</span> <span className="font-bold">adapted to your needs</span>
                   </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -140,10 +140,10 @@ const Solutions = () => {
             
             {/* Right Column - 60% width, Scrollable */}
             <div className="w-3/5 h-full overflow-y-auto scrollbar-hide">
-              <div className="pt-48">
+              <div className="pt-24">
                 {deliveryModels.map((model, index) => (
                   <div key={index} className="flex items-center justify-center">
-                    <Card className="w-4/5 max-w-2xl bg-card border-gray-300 transform scale-75">
+                    <Card className="w-4/5 max-w-2xl bg-card border-gray-300 transform scale-75 -my-4">
                       <CardHeader>
                         <CardTitle className="text-2xl text-primary font-bold mb-4">{model.model}</CardTitle>
                       </CardHeader>
