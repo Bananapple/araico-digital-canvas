@@ -75,8 +75,8 @@ const Index = () => {
         <div className="text-center space-y-8 max-w-4xl mx-auto px-6">
           
           {/* Main Heading */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-light tracking-tight text-foreground">
-            The premier <span className="italic font-normal">AI infrastructure</span> partner in Latin America
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground">
+            The premier <span className="font-serif italic font-normal">AI infrastructure</span> partner in Latin America
           </h1>
           
           {/* Subtitle */}
