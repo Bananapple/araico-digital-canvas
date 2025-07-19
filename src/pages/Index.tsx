@@ -5,13 +5,32 @@ const Index = () => {
   return (
     <div className="min-h-screen overflow-hidden relative bg-gradient-to-br from-orange-50 via-white to-amber-50">
       
-      {/* Wave Line Divider */}
+      {/* Wave Line with Ambient Glow */}
       <div className="absolute inset-0 pointer-events-none">
         <svg className="absolute top-1/3 left-0 w-full h-32" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <defs>
+            <filter id="glow">
+              <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+              <feMerge> 
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
           <path 
-            d="M0,60 C300,20 600,100 900,60 C1050,40 1150,80 1200,60 L1200,120 L0,120 Z"
-            fill="#ff6b35"
-            opacity="0.8"
+            d="M0,60 C150,30 300,90 450,40 C600,10 750,80 900,50 C1050,20 1150,70 1200,45"
+            stroke="#ff6b35"
+            strokeWidth="3"
+            fill="none"
+            filter="url(#glow)"
+            opacity="0.9"
+          />
+          <path 
+            d="M0,60 C150,30 300,90 450,40 C600,10 750,80 900,50 C1050,20 1150,70 1200,45"
+            stroke="#ff8c42"
+            strokeWidth="1"
+            fill="none"
+            opacity="0.6"
           />
         </svg>
       </div>
