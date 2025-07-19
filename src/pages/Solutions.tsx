@@ -1,34 +1,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Cpu, Building, Globe, Leaf, MapPin, Zap } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
 
 const Solutions = () => {
-  const [activeCard, setActiveCard] = useState(0);
-  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
-
-  useEffect(() => {
-    const observers: IntersectionObserver[] = [];
-    
-    cardRefs.current.forEach((cardRef, index) => {
-      if (cardRef) {
-        const observer = new IntersectionObserver(
-          ([entry]) => {
-            if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
-              setActiveCard(index);
-            }
-          },
-          { threshold: 0.5, rootMargin: "-20% 0px -20% 0px" }
-        );
-        observer.observe(cardRef);
-        observers.push(observer);
-      }
-    });
-
-    return () => {
-      observers.forEach(observer => observer.disconnect());
-    };
-  }, []);
 
   const deliveryModels = [
     {
@@ -150,111 +124,42 @@ const Solutions = () => {
       <div className="container mx-auto px-6 space-y-20">
         
         {/* Flexible Delivery Models */}
-        <section className="h-screen overflow-hidden relative">
-          {/* Desktop Two-Column Layout */}
-          <div className="hidden md:flex h-full">
-            {/* Left Column - 40% width, Fixed */}
-            <div className="w-2/5 h-full flex items-center justify-center px-12">
-              <div className="max-w-md">
-                  <h2 className="text-5xl text-black tracking-tight mb-8">
-                    <span style={{fontFamily: 'Times, "Times New Roman", serif'}} className="italic font-normal">Flexible delivery models</span> <span className="font-bold">adapted to your needs</span>
-                  </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Choose the perfect infrastructure model that matches your control requirements and operational preferences.
-                </p>
-              </div>
-            </div>
-            
-            {/* Right Column - 60% width, Scrollable */}
-            <div className="w-3/5 h-full overflow-y-auto scrollbar-hide">
-              <div className="pt-44 pb-44">
-                {deliveryModels.map((model, index) => (
-                  <div 
-                    key={index} 
-                    ref={el => cardRefs.current[index] = el}
-                    className="flex items-center justify-center"
-                  >
-                    <Card className="w-4/5 max-w-2xl bg-card border-gray-300 transform scale-75 -my-8">
-                        <CardHeader className="pb-2">
-                          <CardTitle className="text-2xl text-primary font-bold mb-4">{model.model}</CardTitle>
-                        </CardHeader>
-                        <CardContent className="space-y-6 pt-0">
-                        <div>
-                          <p className="text-base font-semibold text-foreground mb-2">We Provide:</p>
-                          <p className="text-base text-muted-foreground leading-relaxed">{model.weProvide}</p>
-                        </div>
-                        <div>
-                          <p className="text-base font-semibold text-foreground mb-2">You Manage:</p>
-                          <p className="text-base text-muted-foreground leading-relaxed">{model.youManage}</p>
-                        </div>
-                        <div>
-                          <p className="text-base font-semibold text-foreground mb-2">Best For:</p>
-                          <p className="text-base text-muted-foreground leading-relaxed">{model.bestFor}</p>
-                        </div>
-                          <div className="mt-4">
-                            <div className="mb-2">
-                              <span className="text-base font-medium text-foreground">Client Control</span>
-                            </div>
-                            <Progress value={(index + 1) * 20} className="h-3" />
-                          </div>
-                        </CardContent>
-                    </Card>
+        <section>
+          <h2 className="text-4xl text-center mb-8 text-black tracking-tight">
+            <span style={{fontFamily: 'Times, "Times New Roman", serif'}} className="italic font-normal">Flexible delivery models</span> <span className="font-bold">adapted to your needs</span>
+          </h2>
+          <p className="text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
+            Choose the perfect infrastructure model that matches your control requirements and operational preferences.
+          </p>
+          
+          <div className="grid gap-6 max-w-4xl mx-auto">
+            {deliveryModels.map((model, index) => (
+              <Card key={index} className="bg-card border-gray-300 hover-lift">
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-2xl text-primary font-bold mb-4">{model.model}</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-6 pt-0">
+                  <div>
+                    <p className="text-base font-semibold text-foreground mb-2">We Provide:</p>
+                    <p className="text-base text-muted-foreground leading-relaxed">{model.weProvide}</p>
                   </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Scroll Tracker - Positioned relative to the section */}
-          <div className="hidden md:block absolute right-8 top-1/2 transform -translate-y-1/2 z-20">
-            <div className="flex flex-col space-y-3">
-              {deliveryModels.map((_, index) => (
-                <div
-                  key={index}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    activeCard === index 
-                      ? 'bg-primary scale-125' 
-                      : 'bg-muted border-2 border-muted-foreground/30'
-                  }`}
-                />
-              ))}
-            </div>
-          </div>
-
-          {/* Mobile Cards */}
-          <div className="md:hidden">
-            <h2 className="text-3xl text-center mb-12 text-black tracking-tight">
-              <span style={{fontFamily: 'Times, "Times New Roman", serif'}} className="italic font-normal">Flexible delivery models</span> <span className="font-bold">adapted to your needs</span>
-            </h2>
-            <div className="space-y-4">
-              {deliveryModels.map((model, index) => (
-                <Card key={index} className="bg-card border-gray-300 hover-lift">
-                  <CardHeader>
-                    <CardTitle className="text-lg text-primary font-bold">{model.model}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-3">
-                    <div>
-                      <p className="text-sm font-semibold text-foreground mb-1">We Provide:</p>
-                      <p className="text-sm text-muted-foreground">{model.weProvide}</p>
+                  <div>
+                    <p className="text-base font-semibold text-foreground mb-2">You Manage:</p>
+                    <p className="text-base text-muted-foreground leading-relaxed">{model.youManage}</p>
+                  </div>
+                  <div>
+                    <p className="text-base font-semibold text-foreground mb-2">Best For:</p>
+                    <p className="text-base text-muted-foreground leading-relaxed">{model.bestFor}</p>
+                  </div>
+                  <div className="mt-4">
+                    <div className="mb-2">
+                      <span className="text-base font-medium text-foreground">Client Control</span>
                     </div>
-                    <div>
-                      <p className="text-sm font-semibold text-foreground mb-1">You Manage:</p>
-                      <p className="text-sm text-muted-foreground">{model.youManage}</p>
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold text-foreground mb-1">Best For:</p>
-                      <p className="text-sm text-muted-foreground">{model.bestFor}</p>
-                    </div>
-                    <div className="mt-4">
-                      <div className="mb-2">
-                        <span className="text-sm font-medium text-foreground">Client Control</span>
-                      </div>
-                      <Progress value={(index + 1) * 20} className="h-2" />
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+                    <Progress value={(index + 1) * 20} className="h-3" />
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </section>
 
