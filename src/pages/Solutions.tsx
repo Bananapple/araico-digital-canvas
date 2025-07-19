@@ -129,9 +129,9 @@ const Solutions = () => {
             {/* Left Column - 40% width, Fixed */}
             <div className="w-2/5 h-full flex items-center justify-center px-12">
               <div className="max-w-md">
-                <h2 className="text-3xl text-black tracking-tight mb-8">
-                  <span style={{fontFamily: 'Times, "Times New Roman", serif'}} className="italic font-normal">Flexible delivery models</span> adapted to your needs
-                </h2>
+                  <h2 className="text-3xl text-black tracking-tight mb-8">
+                    <span style={{fontFamily: 'Times, "Times New Roman", serif'}} className="italic font-normal">Flexible delivery models</span> adapted to your needs
+                  </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   Choose the perfect infrastructure model that matches your control requirements and operational preferences.
                 </p>
@@ -214,7 +214,7 @@ const Solutions = () => {
         {/* Industries We Target */}
         <section>
           <h2 className="text-3xl font-bold text-center mb-12 text-black tracking-tight">
-            INDUSTRIES WE TARGET
+            Industries we target
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {industries.map((industry, index) => (
@@ -238,7 +238,7 @@ const Solutions = () => {
         {/* Why Araico */}
         <section>
           <h2 className="text-3xl font-bold text-center mb-12 text-black tracking-tight">
-            WHY ARAICO?
+            Why Araico?
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {whyAraico.map((item, index) => (
