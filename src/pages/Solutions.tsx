@@ -150,7 +150,7 @@ const Solutions = () => {
       <div className="container mx-auto px-6 space-y-20">
         
         {/* Flexible Delivery Models */}
-        <section className="h-screen overflow-hidden">
+        <section className="h-screen overflow-hidden relative">
           {/* Desktop Two-Column Layout */}
           <div className="hidden md:flex h-full">
             {/* Left Column - 40% width, Fixed */}
@@ -204,7 +204,7 @@ const Solutions = () => {
               </div>
               
               {/* Scroll Tracker */}
-              <div className="fixed right-8 top-1/2 transform -translate-y-1/2 flex flex-col space-y-3 z-20">
+              <div className="absolute right-8 top-1/2 transform -translate-y-1/2 flex flex-col space-y-3 z-20">
                 {deliveryModels.map((_, index) => (
                   <div
                     key={index}
