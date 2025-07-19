@@ -166,7 +166,7 @@ const Solutions = () => {
             </div>
             
             {/* Right Column - 60% width, Scrollable */}
-            <div className="w-3/5 h-full overflow-y-auto scrollbar-hide relative">
+            <div className="w-3/5 h-full overflow-y-auto scrollbar-hide">
               <div className="pt-44">
                 {deliveryModels.map((model, index) => (
                   <div 
@@ -202,20 +202,22 @@ const Solutions = () => {
                   </div>
                 ))}
               </div>
-              
-              {/* Scroll Tracker */}
-              <div className="absolute right-8 top-1/2 transform -translate-y-1/2 flex flex-col space-y-3 z-20">
-                {deliveryModels.map((_, index) => (
-                  <div
-                    key={index}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                      activeCard === index 
-                        ? 'bg-primary scale-125' 
-                        : 'bg-muted border-2 border-muted-foreground/30'
-                    }`}
-                  />
-                ))}
-              </div>
+            </div>
+          </div>
+
+          {/* Scroll Tracker - Positioned relative to the section */}
+          <div className="hidden md:block absolute right-8 top-1/2 transform -translate-y-1/2 z-20">
+            <div className="flex flex-col space-y-3">
+              {deliveryModels.map((_, index) => (
+                <div
+                  key={index}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    activeCard === index 
+                      ? 'bg-primary scale-125' 
+                      : 'bg-muted border-2 border-muted-foreground/30'
+                  }`}
+                />
+              ))}
             </div>
           </div>
 
