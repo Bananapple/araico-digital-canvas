@@ -123,11 +123,11 @@ const Solutions = () => {
       <div className="container mx-auto px-6 space-y-20">
         
         {/* Flexible Delivery Models */}
-        <section className="relative">
+        <section className="relative min-h-[200vh]">
           {/* Desktop Two-Column Layout */}
           <div className="hidden md:flex">
             {/* Left Column - 40% width, Sticky */}
-            <div className="w-2/5 sticky top-20 h-screen flex items-center justify-center px-12">
+            <div className="w-2/5 sticky top-20 h-screen flex items-center justify-center px-12 self-start">
               <div className="max-w-md">
                   <h2 className="text-5xl text-black tracking-tight mb-8">
                     <span style={{fontFamily: 'Times, "Times New Roman", serif'}} className="italic font-normal">Flexible delivery models</span> <span className="font-bold">adapted to your needs</span>
@@ -140,9 +140,9 @@ const Solutions = () => {
             
             {/* Right Column - 60% width, Cards with enough height to scroll */}
             <div className="w-3/5">
-              <div className="pt-44 pb-44">
+              <div className="pt-44 pb-44 space-y-16">
                 {deliveryModels.map((model, index) => (
-                  <div key={index} className="flex items-center justify-center mb-16">
+                  <div key={index} className="flex items-center justify-center">{/* removed mb-16 since we have space-y-16 on parent */}
                     <Card className="w-4/5 max-w-2xl bg-card border-gray-300 transform scale-75">
                         <CardHeader className="pb-2">
                           <CardTitle className="text-2xl text-primary font-bold mb-4">{model.model}</CardTitle>
