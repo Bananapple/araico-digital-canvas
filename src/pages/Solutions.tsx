@@ -215,50 +215,136 @@ const Solutions = () => {
         </section>
 
         {/* Industries We Target */}
-        <section>
-          <h2 className="text-3xl font-bold text-center mb-12 text-black tracking-tight">
-            Industries we target
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {industries.map((industry, index) => (
-              <Card key={index} className="bg-card border-gray-300 hover-lift text-center">
-                <CardHeader>
-                  <div className="mx-auto w-16 h-16 rounded-full bg-gradient-primary flex items-center justify-center mb-4">
-                    <industry.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <CardTitle className="text-xl text-foreground">{industry.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-muted-foreground">
-                    {industry.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            ))}
+        <section className="min-h-screen py-20">
+          {/* Desktop Two-Column Layout */}
+          <div className="hidden md:flex gap-12 items-start">
+            {/* Left Column - Title and Description */}
+            <div className="w-2/5 flex items-start justify-center">
+              <div className="max-w-md">
+                <h2 className="text-5xl text-black tracking-tight mb-8">
+                  <span className="font-bold">Industries we target</span>
+                </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Specialized infrastructure solutions for AI-driven organizations and enterprises.
+                </p>
+              </div>
+            </div>
+            
+            {/* Right Column - Cards */}
+            <div className="w-3/5">
+              <div className="grid gap-1">
+                {industries.map((industry, index) => (
+                  <Card key={index} className="bg-card border-gray-300 scale-75 -my-8 text-center">
+                    <CardHeader>
+                      <div className="mx-auto w-16 h-16 rounded-full bg-gradient-primary flex items-center justify-center mb-4">
+                        <industry.icon className="w-8 h-8 text-white" />
+                      </div>
+                      <CardTitle className="text-xl text-foreground">{industry.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <CardDescription className="text-muted-foreground">
+                        {industry.description}
+                      </CardDescription>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile Layout */}
+          <div className="md:hidden">
+            <h2 className="text-3xl text-center mb-8 text-black tracking-tight font-bold">
+              Industries we target
+            </h2>
+            <p className="text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
+              Specialized infrastructure solutions for AI-driven organizations and enterprises.
+            </p>
+            
+            <div className="grid gap-1 max-w-4xl mx-auto">
+              {industries.map((industry, index) => (
+                <Card key={index} className="bg-card border-gray-300 scale-75 -my-8 text-center">
+                  <CardHeader>
+                    <div className="mx-auto w-16 h-16 rounded-full bg-gradient-primary flex items-center justify-center mb-4">
+                      <industry.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <CardTitle className="text-xl text-foreground">{industry.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-muted-foreground">
+                      {industry.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </section>
 
         {/* Why Araico */}
-        <section>
-          <h2 className="text-3xl font-bold text-center mb-12 text-black tracking-tight">
-            Why Araico?
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {whyAraico.map((item, index) => (
-              <Card key={index} className="bg-card border-gray-300 hover-lift text-center">
-                <CardHeader>
-                  <div className="mx-auto w-16 h-16 rounded-full bg-gradient-primary flex items-center justify-center mb-4">
-                    <item.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <CardTitle className="text-xl text-foreground">{item.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-muted-foreground">
-                    {item.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            ))}
+        <section className="min-h-screen py-20">
+          {/* Desktop Two-Column Layout */}
+          <div className="hidden md:flex gap-12 items-start">
+            {/* Left Column - Title and Description */}
+            <div className="w-2/5 flex items-start justify-center">
+              <div className="max-w-md">
+                <h2 className="text-5xl text-black tracking-tight mb-8">
+                  <span className="font-bold">Why Araico?</span>
+                </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Strategic advantages that make Paraguay the ideal location for your data center infrastructure.
+                </p>
+              </div>
+            </div>
+            
+            {/* Right Column - Cards */}
+            <div className="w-3/5">
+              <div className="grid gap-1">
+                {whyAraico.map((item, index) => (
+                  <Card key={index} className="bg-card border-gray-300 scale-75 -my-8 text-center">
+                    <CardHeader>
+                      <div className="mx-auto w-16 h-16 rounded-full bg-gradient-primary flex items-center justify-center mb-4">
+                        <item.icon className="w-8 h-8 text-white" />
+                      </div>
+                      <CardTitle className="text-xl text-foreground">{item.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <CardDescription className="text-muted-foreground">
+                        {item.description}
+                      </CardDescription>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile Layout */}
+          <div className="md:hidden">
+            <h2 className="text-3xl text-center mb-8 text-black tracking-tight font-bold">
+              Why Araico?
+            </h2>
+            <p className="text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
+              Strategic advantages that make Paraguay the ideal location for your data center infrastructure.
+            </p>
+            
+            <div className="grid gap-1 max-w-4xl mx-auto">
+              {whyAraico.map((item, index) => (
+                <Card key={index} className="bg-card border-gray-300 scale-75 -my-8 text-center">
+                  <CardHeader>
+                    <div className="mx-auto w-16 h-16 rounded-full bg-gradient-primary flex items-center justify-center mb-4">
+                      <item.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <CardTitle className="text-xl text-foreground">{item.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-muted-foreground">
+                      {item.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </section>
       </div>
