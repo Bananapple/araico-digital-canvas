@@ -134,9 +134,6 @@ const Solutions = () => {
               {/* Left Column - 40% width, Sticky */}
               <div className="col-span-2">
                 <div className="sticky top-20 h-screen flex flex-col justify-center">
-                  <h3 className="text-4xl font-bold text-foreground mb-6">
-                    ⚙️ Delivery Models Comparison
-                  </h3>
                   <p className="text-lg text-muted-foreground leading-relaxed">
                     Choose the perfect infrastructure model that matches your control requirements and operational preferences.
                   </p>
@@ -183,11 +180,6 @@ const Solutions = () => {
 
           {/* Tablet Layout */}
           <div className="hidden md:block lg:hidden">
-            <div className="mb-8">
-              <h3 className="text-2xl font-bold text-foreground mb-4 text-center">
-                ⚙️ Delivery Models Comparison
-              </h3>
-            </div>
             <div className="space-y-6">
               {deliveryModels.map((model, index) => (
                 <Card key={index} className="bg-card border-gray-300 hover-lift">
@@ -222,11 +214,6 @@ const Solutions = () => {
 
           {/* Mobile Cards */}
           <div className="md:hidden">
-            <div className="mb-8">
-              <h3 className="text-xl font-bold text-foreground mb-4 text-center">
-                ⚙️ Delivery Models Comparison
-              </h3>
-            </div>
             <div className="space-y-4">
               {deliveryModels.map((model, index) => (
                 <Card key={index} className="bg-card border-gray-300 hover-lift">
