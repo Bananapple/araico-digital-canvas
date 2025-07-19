@@ -1,34 +1,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Cpu, Building, Globe, Leaf, MapPin, Zap } from "lucide-react";
-import { useState, useEffect, useRef } from "react";
 
 const Solutions = () => {
-  const [activeCard, setActiveCard] = useState(0);
-  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
-
-  useEffect(() => {
-    const observers = cardRefs.current.map((card, index) => {
-      if (!card) return null;
-      
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setActiveCard(index);
-          }
-        },
-        { threshold: 0.6, rootMargin: '-20% 0px' }
-      );
-      
-      observer.observe(card);
-      return observer;
-    });
-
-    return () => {
-      observers.forEach(observer => observer?.disconnect());
-    };
-  }, []);
-
   const deliveryModels = [
     {
       model: "Powered Shell",
@@ -149,11 +123,11 @@ const Solutions = () => {
       <div className="container mx-auto px-6 space-y-20">
         
         {/* Flexible Delivery Models */}
-        <section className="relative min-h-[200vh]">
+        <section className="h-screen overflow-hidden">
           {/* Desktop Two-Column Layout */}
-          <div className="hidden md:flex items-start">
-            {/* Left Column - 40% width, Sticky */}
-            <div className="w-2/5 sticky top-20 h-screen flex items-center justify-center px-12 self-start">
+          <div className="hidden md:flex h-full">
+            {/* Left Column - 40% width, Fixed */}
+            <div className="w-2/5 h-full flex items-center justify-center px-12">
               <div className="max-w-md">
                   <h2 className="text-5xl text-black tracking-tight mb-8">
                     <span style={{fontFamily: 'Times, "Times New Roman", serif'}} className="italic font-normal">Flexible delivery models</span> <span className="font-bold">adapted to your needs</span>
@@ -164,26 +138,12 @@ const Solutions = () => {
               </div>
             </div>
             
-            {/* Right Column - 60% width, Cards with enough height to scroll */}
-            <div className="w-3/5 relative">
-              {/* Progress Dots Tracker */}
-              <div className="absolute right-[-60px] top-1/2 transform -translate-y-1/2 flex flex-col space-y-3 z-20">
-                {deliveryModels.map((_, index) => (
-                  <div
-                    key={index}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                      activeCard === index 
-                        ? 'bg-primary scale-125' 
-                        : 'bg-muted-foreground/30 hover:bg-muted-foreground/50'
-                    }`}
-                  />
-                ))}
-              </div>
-              
-              <div className="pt-44 pb-44 space-y-16">
-                 {deliveryModels.map((model, index) => (
-                   <div key={index} ref={el => cardRefs.current[index] = el} className="flex items-center justify-center">
-                     <Card className="w-4/5 max-w-2xl bg-card border-gray-300 transform scale-75">
+            {/* Right Column - 60% width, Scrollable */}
+            <div className="w-3/5 h-full overflow-y-auto scrollbar-hide">
+              <div className="pt-44">
+                {deliveryModels.map((model, index) => (
+                  <div key={index} className="flex items-center justify-center">
+                    <Card className="w-4/5 max-w-2xl bg-card border-gray-300 transform scale-75 -my-8">
                         <CardHeader className="pb-2">
                           <CardTitle className="text-2xl text-primary font-bold mb-4">{model.model}</CardTitle>
                         </CardHeader>
