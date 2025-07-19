@@ -6,12 +6,12 @@ const Logo = () => {
       <img 
         src="/araico-logo-sign.png" 
         alt="Araico Logo Sign" 
-        className="h-8 w-8"
+        className="h-10 w-10"
       />
       <img 
         src="/araico-logo-text.png" 
         alt="Araico Logo Text" 
-        className="h-8"
+        className="h-10"
       />
     </Link>
   );
