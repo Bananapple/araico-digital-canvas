@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 
 const Index = () => {
   return (
-    <div className="min-h-screen overflow-hidden relative" style={{ background: 'linear-gradient(135deg, #fef7ed 0%, #fed7aa 50%, #fef7ed 100%)' }}>
+    <div className="min-h-screen overflow-hidden bg-gradient-to-br from-orange-50 via-amber-50 to-orange-100 relative">
       
       <Header />
       
