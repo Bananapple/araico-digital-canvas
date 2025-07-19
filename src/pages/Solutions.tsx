@@ -124,11 +124,11 @@ const Solutions = () => {
       <div className="container mx-auto px-6 space-y-20">
         
         {/* Flexible Delivery Models */}
-        <section className="min-h-screen flex flex-col justify-center py-20">
+        <section className="min-h-screen py-20">
           {/* Desktop Two-Column Layout */}
-          <div className="hidden md:flex gap-12 items-center">
+          <div className="hidden md:flex gap-12 items-start pt-[50vh]">
             {/* Left Column - Title and Description */}
-            <div className="w-2/5 flex items-center justify-center">
+            <div className="w-2/5 flex items-start justify-center -mt-32">
               <div className="max-w-md">
                 <h2 className="text-5xl text-black tracking-tight mb-8">
                   <span style={{fontFamily: 'Times, "Times New Roman", serif'}} className="italic font-normal">Flexible delivery models</span> <span className="font-bold">adapted to your needs</span>
