@@ -129,7 +129,7 @@ const Solutions = () => {
             {/* Left Column - 40% width, Fixed */}
             <div className="w-2/5 h-full flex items-center justify-center px-12">
               <div className="max-w-md">
-                  <h2 className="text-4xl text-black tracking-tight mb-8">
+                  <h2 className="text-5xl text-black tracking-tight mb-8">
                     <span style={{fontFamily: 'Times, "Times New Roman", serif'}} className="italic font-normal">Flexible delivery models</span> <span className="font-bold">adapted to your needs</span>
                   </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -140,14 +140,14 @@ const Solutions = () => {
             
             {/* Right Column - 60% width, Scrollable */}
             <div className="w-3/5 h-full overflow-y-auto scrollbar-hide">
-              <div className="pt-24">
+              <div className="pt-40">
                 {deliveryModels.map((model, index) => (
                   <div key={index} className="flex items-center justify-center">
-                    <Card className="w-4/5 max-w-2xl bg-card border-gray-300 transform scale-75 -my-4">
-                      <CardHeader>
-                        <CardTitle className="text-2xl text-primary font-bold mb-4">{model.model}</CardTitle>
-                      </CardHeader>
-                      <CardContent className="space-y-6">
+                    <Card className="w-4/5 max-w-2xl bg-card border-gray-300 transform scale-75 -my-8">
+                        <CardHeader className="pb-2">
+                          <CardTitle className="text-2xl text-primary font-bold mb-4">{model.model}</CardTitle>
+                        </CardHeader>
+                        <CardContent className="space-y-6 pt-0">
                         <div>
                           <p className="text-base font-semibold text-foreground mb-2">We Provide:</p>
                           <p className="text-base text-muted-foreground leading-relaxed">{model.weProvide}</p>
@@ -160,13 +160,13 @@ const Solutions = () => {
                           <p className="text-base font-semibold text-foreground mb-2">Best For:</p>
                           <p className="text-base text-muted-foreground leading-relaxed">{model.bestFor}</p>
                         </div>
-                        <div className="mt-6">
-                          <div className="mb-2">
-                            <span className="text-base font-medium text-foreground">Client Control</span>
+                          <div className="mt-4">
+                            <div className="mb-2">
+                              <span className="text-base font-medium text-foreground">Client Control</span>
+                            </div>
+                            <Progress value={(index + 1) * 20} className="h-3" />
                           </div>
-                          <Progress value={(index + 1) * 20} className="h-3" />
-                        </div>
-                      </CardContent>
+                        </CardContent>
                     </Card>
                   </div>
                 ))}
