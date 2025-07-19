@@ -24,7 +24,7 @@ const Index = () => {
           {/* Background glow layers */}
           <path 
             d="M0,150 C300,100 400,50 600,100 C800,150 900,200 1200,150"
-            stroke="#ff6b35"
+            stroke="#00bcd4"
             strokeWidth="40"
             fill="none"
             filter="url(#matteGlow)"
@@ -32,7 +32,7 @@ const Index = () => {
           />
           <path 
             d="M0,150 C300,100 400,50 600,100 C800,150 900,200 1200,150"
-            stroke="#ff8c42"
+            stroke="#26c6da"
             strokeWidth="25"
             fill="none"
             filter="url(#matteGlow)"
@@ -40,7 +40,7 @@ const Index = () => {
           />
           <path 
             d="M0,150 C300,100 400,50 600,100 C800,150 900,200 1200,150"
-            stroke="#ffa726"
+            stroke="#4dd0e1"
             strokeWidth="15"
             fill="none"
             filter="url(#matteGlow)"
