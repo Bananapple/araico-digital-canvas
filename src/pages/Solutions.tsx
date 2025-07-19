@@ -124,17 +124,15 @@ const Solutions = () => {
         
         {/* Flexible Delivery Models */}
         <section>
-          {/* Title */}
-          <h2 className="text-3xl text-center mb-12 text-black tracking-tight">
-            <span style={{fontFamily: 'Times, "Times New Roman", serif'}} className="italic font-normal">Flexible delivery models</span> adapted to your needs
-          </h2>
-          
           {/* Desktop Two-Column Layout */}
           <div className="hidden md:block">
             <div className="flex min-h-screen">
               {/* Left Column - 40% width, Sticky */}
               <div className="w-2/5 pr-12">
                 <div className="sticky top-20 h-screen flex flex-col justify-center">
+                  <h2 className="text-3xl text-black tracking-tight mb-8">
+                    <span style={{fontFamily: 'Times, "Times New Roman", serif'}} className="italic font-normal">Flexible delivery models</span> adapted to your needs
+                  </h2>
                   <p className="text-lg text-muted-foreground leading-relaxed">
                     Choose the perfect infrastructure model that matches your control requirements and operational preferences.
                   </p>
@@ -143,19 +141,12 @@ const Solutions = () => {
               
               {/* Right Column - 60% width, Scrollable */}
               <div className="w-3/5">
-                <div className="space-y-8 py-20">
+                <div className="space-y-32 py-20">
                   {deliveryModels.map((model, index) => (
                     <div key={index} className="min-h-screen flex items-center">
-                      <Card className="w-full bg-card border-gray-300 hover-lift">
+                      <Card className="w-full bg-card border-gray-300 hover-lift transform scale-90">
                         <CardHeader>
                           <CardTitle className="text-2xl text-primary font-bold mb-4">{model.model}</CardTitle>
-                          <div className="space-y-3">
-                            <div className="flex justify-between items-center">
-                              <span className="text-base font-medium text-foreground">Client Control</span>
-                              <span className="text-base text-muted-foreground">{index + 1}/5</span>
-                            </div>
-                            <Progress value={(index + 1) * 20} className="h-3" />
-                          </div>
                         </CardHeader>
                         <CardContent className="space-y-6">
                           <div>
@@ -170,6 +161,12 @@ const Solutions = () => {
                             <p className="text-base font-semibold text-foreground mb-2">Best For:</p>
                             <p className="text-base text-muted-foreground leading-relaxed">{model.bestFor}</p>
                           </div>
+                          <div className="mt-6">
+                            <div className="mb-2">
+                              <span className="text-base font-medium text-foreground">Client Control</span>
+                            </div>
+                            <Progress value={(index + 1) * 20} className="h-3" />
+                          </div>
                         </CardContent>
                       </Card>
                     </div>
@@ -181,18 +178,14 @@ const Solutions = () => {
 
           {/* Mobile Cards */}
           <div className="md:hidden">
+            <h2 className="text-3xl text-center mb-12 text-black tracking-tight">
+              <span style={{fontFamily: 'Times, "Times New Roman", serif'}} className="italic font-normal">Flexible delivery models</span> adapted to your needs
+            </h2>
             <div className="space-y-4">
               {deliveryModels.map((model, index) => (
                 <Card key={index} className="bg-card border-gray-300 hover-lift">
                   <CardHeader>
                     <CardTitle className="text-lg text-primary font-bold">{model.model}</CardTitle>
-                    <div className="mt-4 space-y-2">
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm font-medium text-foreground">Client Control</span>
-                        <span className="text-sm text-muted-foreground">{index + 1}/5</span>
-                      </div>
-                      <Progress value={(index + 1) * 20} className="h-2" />
-                    </div>
                   </CardHeader>
                   <CardContent className="space-y-3">
                     <div>
@@ -206,6 +199,12 @@ const Solutions = () => {
                     <div>
                       <p className="text-sm font-semibold text-foreground mb-1">Best For:</p>
                       <p className="text-sm text-muted-foreground">{model.bestFor}</p>
+                    </div>
+                    <div className="mt-4">
+                      <div className="mb-2">
+                        <span className="text-sm font-medium text-foreground">Client Control</span>
+                      </div>
+                      <Progress value={(index + 1) * 20} className="h-2" />
                     </div>
                   </CardContent>
                 </Card>
