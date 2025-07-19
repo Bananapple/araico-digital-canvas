@@ -20,32 +20,50 @@ const Index = () => {
                 <feMergeNode in="SourceGraphic"/>
               </feMerge>
             </filter>
+            <animateTransform
+              attributeName="transform"
+              attributeType="XML"
+              type="translate"
+              values="0 0; 20 0; 0 0"
+              dur="8s"
+              repeatCount="indefinite"
+            />
           </defs>
           {/* Background glow layers */}
-          <path 
-            d="M0,150 C300,100 400,50 600,100 C800,150 900,200 1200,150"
-            stroke="#00bcd4"
-            strokeWidth="40"
-            fill="none"
-            filter="url(#matteGlow)"
-            opacity="0.3"
-          />
-          <path 
-            d="M0,150 C300,100 400,50 600,100 C800,150 900,200 1200,150"
-            stroke="#26c6da"
-            strokeWidth="25"
-            fill="none"
-            filter="url(#matteGlow)"
-            opacity="0.4"
-          />
-          <path 
-            d="M0,150 C300,100 400,50 600,100 C800,150 900,200 1200,150"
-            stroke="#4dd0e1"
-            strokeWidth="15"
-            fill="none"
-            filter="url(#matteGlow)"
-            opacity="0.6"
-          />
+          <g>
+            <animateTransform
+              attributeName="transform"
+              attributeType="XML"
+              type="translate"
+              values="0 0; 15 -5; 0 0; -10 5; 0 0"
+              dur="12s"
+              repeatCount="indefinite"
+            />
+            <path 
+              d="M0,150 C300,100 400,50 600,100 C800,150 900,200 1200,150"
+              stroke="#00bcd4"
+              strokeWidth="40"
+              fill="none"
+              filter="url(#matteGlow)"
+              opacity="0.3"
+            />
+            <path 
+              d="M0,150 C300,100 400,50 600,100 C800,150 900,200 1200,150"
+              stroke="#26c6da"
+              strokeWidth="25"
+              fill="none"
+              filter="url(#matteGlow)"
+              opacity="0.4"
+            />
+            <path 
+              d="M0,150 C300,100 400,50 600,100 C800,150 900,200 1200,150"
+              stroke="#4dd0e1"
+              strokeWidth="15"
+              fill="none"
+              filter="url(#matteGlow)"
+              opacity="0.6"
+            />
+          </g>
         </svg>
       </div>
       
