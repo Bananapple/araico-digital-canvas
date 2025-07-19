@@ -44,7 +44,53 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen pt-20 pb-16">
+    <div className="min-h-screen overflow-hidden relative bg-background">
+      
+      {/* S-Shaped Wave with Matte Glass Glow */}
+      <div className="absolute inset-0 pointer-events-none">
+        <svg className="absolute top-1/4 left-0 w-full h-96" viewBox="0 0 1200 400" preserveAspectRatio="none">
+          <defs>
+            <filter id="matteGlow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="12" result="blur1"/>
+              <feGaussianBlur stdDeviation="8" result="blur2"/>
+              <feGaussianBlur stdDeviation="4" result="blur3"/>
+              <feMerge> 
+                <feMergeNode in="blur1"/>
+                <feMergeNode in="blur2"/>
+                <feMergeNode in="blur3"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+          {/* Background glow layers */}
+          <path 
+            d="M0,150 C300,100 400,50 600,100 C800,150 900,200 1200,150"
+            stroke="#00bcd4"
+            strokeWidth="40"
+            fill="none"
+            filter="url(#matteGlow)"
+            opacity="0.3"
+          />
+          <path 
+            d="M0,150 C300,100 400,50 600,100 C800,150 900,200 1200,150"
+            stroke="#26c6da"
+            strokeWidth="25"
+            fill="none"
+            filter="url(#matteGlow)"
+            opacity="0.4"
+          />
+          <path 
+            d="M0,150 C300,100 400,50 600,100 C800,150 900,200 1200,150"
+            stroke="#4dd0e1"
+            strokeWidth="15"
+            fill="none"
+            filter="url(#matteGlow)"
+            opacity="0.6"
+          />
+        </svg>
+      </div>
+      
+      <div className="pt-20 pb-16 relative z-10">
       <div className="container mx-auto px-6">
         <div className="max-w-2xl mx-auto">
           
@@ -160,6 +206,7 @@ const Contact = () => {
             </CardContent>
           </Card>
         </div>
+      </div>
       </div>
     </div>
   );
