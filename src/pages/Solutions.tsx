@@ -167,7 +167,7 @@ const Solutions = () => {
             
             {/* Right Column - 60% width, Scrollable */}
             <div className="w-3/5 h-full overflow-y-auto scrollbar-hide">
-              <div className="pt-44">
+              <div className="pt-44 pb-44">
                 {deliveryModels.map((model, index) => (
                   <div 
                     key={index} 
