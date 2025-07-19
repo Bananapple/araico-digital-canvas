@@ -123,11 +123,11 @@ const Solutions = () => {
       <div className="container mx-auto px-6 space-y-20">
         
         {/* Flexible Delivery Models */}
-        <section className="h-screen overflow-y-auto scrollbar-hide">
+        <section className="h-screen overflow-y-auto scrollbar-hide relative">
           {/* Desktop Two-Column Layout */}
           <div className="hidden md:flex h-full relative">
-            {/* Left Column - 40% width, Fixed */}
-            <div className="w-2/5 h-full flex items-center justify-center px-12 fixed left-0 top-20 z-10">
+            {/* Left Column - 40% width, Fixed within section */}
+            <div className="w-2/5 h-screen flex items-center justify-center px-12 absolute left-0 top-0 z-10">
               <div className="max-w-md">
                   <h2 className="text-5xl text-black tracking-tight mb-8">
                     <span style={{fontFamily: 'Times, "Times New Roman", serif'}} className="italic font-normal">Flexible delivery models</span> <span className="font-bold">adapted to your needs</span>
@@ -138,8 +138,8 @@ const Solutions = () => {
               </div>
             </div>
             
-            {/* Right Column - 60% width, Cards */}
-            <div className="w-3/5 ml-auto">
+            {/* Right Column - 60% width, Cards with full height to enable scroll */}
+            <div className="w-full pl-[40%]">
               <div className="pt-44">
                 {deliveryModels.map((model, index) => (
                   <div key={index} className="flex items-center justify-center">
