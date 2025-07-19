@@ -4,11 +4,11 @@ import Header from "@/components/Header";
 const Index = () => {
   return (
     <div className="min-h-screen overflow-hidden bg-background relative">
-      {/* Gradient Background Effect */}
-      <div className="fixed inset-0 z-0">
-        <div className="absolute top-20 left-20 w-96 h-96 bg-orange-500/30 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-1/2 right-1/4 w-80 h-80 bg-amber-500/25 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-20 right-20 w-72 h-72 bg-orange-400/30 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      {/* Animated Wave Background Effect */}
+      <div className="fixed inset-0 -z-10 overflow-hidden">
+        <div className="absolute top-1/4 -left-96 w-[200vw] h-96 bg-gradient-to-r from-transparent via-orange-500/20 to-transparent rounded-full blur-3xl animate-pulse" style={{ animation: 'wave 8s ease-in-out infinite' }}></div>
+        <div className="absolute top-1/2 -left-96 w-[200vw] h-80 bg-gradient-to-r from-transparent via-amber-500/15 to-transparent rounded-full blur-3xl" style={{ animation: 'wave 10s ease-in-out infinite 2s' }}></div>
+        <div className="absolute bottom-1/4 -left-96 w-[200vw] h-72 bg-gradient-to-r from-transparent via-orange-400/20 to-transparent rounded-full blur-3xl" style={{ animation: 'wave 12s ease-in-out infinite 4s' }}></div>
       </div>
       
       <Header />
