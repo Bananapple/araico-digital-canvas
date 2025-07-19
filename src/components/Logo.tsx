@@ -4,13 +4,15 @@ const Logo = () => {
   return (
     <Link to="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
       <img 
-        src="/araico-logo.png" 
-        alt="Araico Logo" 
+        src="/araico-logo-sign.png" 
+        alt="Araico Logo Sign" 
         className="h-8 w-8"
       />
-      <div className="text-2xl font-bold text-gradient">
-        ARAICO
-      </div>
+      <img 
+        src="/araico-logo-text.png" 
+        alt="Araico Logo Text" 
+        className="h-8"
+      />
     </Link>
   );
 };
