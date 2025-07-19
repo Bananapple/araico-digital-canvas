@@ -78,7 +78,7 @@ const Solutions = () => {
       
       {/* S-Shaped Wave with Matte Glass Glow */}
       <div className="absolute inset-0 pointer-events-none">
-        <svg className="absolute top-1/4 left-0 w-full h-96" viewBox="0 0 1200 400" preserveAspectRatio="none">
+        <svg className="absolute top-[25vh] left-0 w-full h-96" viewBox="0 0 1200 400" preserveAspectRatio="none">
           <defs>
             <filter id="matteGlow" x="-50%" y="-50%" width="200%" height="200%">
               <feGaussianBlur stdDeviation="12" result="blur1"/>
