@@ -124,15 +124,16 @@ const Solutions = () => {
         
         {/* Flexible Delivery Models */}
         <section>
+          {/* Title */}
           <h2 className="text-3xl text-center mb-12 text-black tracking-tight">
             <span style={{fontFamily: 'Times, "Times New Roman", serif'}} className="italic font-normal">Flexible delivery models</span> adapted to your needs
           </h2>
           
           {/* Desktop Two-Column Layout */}
           <div className="hidden lg:block">
-            <div className="grid grid-cols-5 gap-12">
+            <div className="flex min-h-screen">
               {/* Left Column - 40% width, Sticky */}
-              <div className="col-span-2">
+              <div className="w-2/5 pr-12">
                 <div className="sticky top-20 h-screen flex flex-col justify-center">
                   <p className="text-lg text-muted-foreground leading-relaxed">
                     Choose the perfect infrastructure model that matches your control requirements and operational preferences.
@@ -141,7 +142,7 @@ const Solutions = () => {
               </div>
               
               {/* Right Column - 60% width, Scrollable */}
-              <div className="col-span-3">
+              <div className="w-3/5">
                 <div className="space-y-8 py-20">
                   {deliveryModels.map((model, index) => (
                     <div key={index} className="min-h-screen flex items-center">
