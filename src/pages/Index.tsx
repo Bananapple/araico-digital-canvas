@@ -3,13 +3,16 @@ import Header from "@/components/Header";
 
 const Index = () => {
   return (
-    <div className="min-h-screen overflow-hidden relative bg-gradient-to-r from-orange-400 via-amber-300 to-orange-200">
+    <div className="min-h-screen overflow-hidden relative">
       
-      {/* Animated Wave Pattern */}
-      <div className="wave-container">
-        <div className="wave wave1"></div>
-        <div className="wave wave2"></div>
-        <div className="wave wave3"></div>
+      {/* Static Wave Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-orange-400 via-amber-300 to-orange-200">
+        <div 
+          className="absolute inset-0 bg-gradient-to-r from-orange-500/30 via-transparent to-orange-300/20"
+          style={{
+            clipPath: 'polygon(0 0, 100% 0, 100% 85%, 0 100%)'
+          }}
+        />
       </div>
       
       <Header />
