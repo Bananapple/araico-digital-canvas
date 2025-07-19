@@ -130,7 +130,7 @@ const Solutions = () => {
             <div className="w-2/5 h-full flex items-center justify-center px-12">
               <div className="max-w-md">
                   <h2 className="text-3xl text-black tracking-tight mb-8">
-                    <span style={{fontFamily: 'Times, "Times New Roman", serif'}} className="italic font-normal">Flexible delivery models</span> adapted to your needs
+                    <span style={{fontFamily: 'Times, "Times New Roman", serif'}} className="italic font-normal">Flexible delivery models</span> <span className="font-bold">adapted to your needs</span>
                   </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   Choose the perfect infrastructure model that matches your control requirements and operational preferences.
@@ -177,7 +177,7 @@ const Solutions = () => {
           {/* Mobile Cards */}
           <div className="md:hidden">
             <h2 className="text-3xl text-center mb-12 text-black tracking-tight">
-              <span style={{fontFamily: 'Times, "Times New Roman", serif'}} className="italic font-normal">Flexible delivery models</span> adapted to your needs
+              <span style={{fontFamily: 'Times, "Times New Roman", serif'}} className="italic font-normal">Flexible delivery models</span> <span className="font-bold">adapted to your needs</span>
             </h2>
             <div className="space-y-4">
               {deliveryModels.map((model, index) => (
