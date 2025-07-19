@@ -25,7 +25,7 @@ const Index = () => {
           <path 
             d="M0,150 C300,100 400,50 600,100 C800,150 900,200 1200,150"
             stroke="#ff6b35"
-            strokeWidth="20"
+            strokeWidth="40"
             fill="none"
             filter="url(#matteGlow)"
             opacity="0.3"
@@ -33,7 +33,7 @@ const Index = () => {
           <path 
             d="M0,150 C300,100 400,50 600,100 C800,150 900,200 1200,150"
             stroke="#ff8c42"
-            strokeWidth="12"
+            strokeWidth="25"
             fill="none"
             filter="url(#matteGlow)"
             opacity="0.4"
@@ -41,7 +41,7 @@ const Index = () => {
           <path 
             d="M0,150 C300,100 400,50 600,100 C800,150 900,200 1200,150"
             stroke="#ffa726"
-            strokeWidth="6"
+            strokeWidth="15"
             fill="none"
             filter="url(#matteGlow)"
             opacity="0.6"
