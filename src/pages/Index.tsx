@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 
 const Index = () => {
   return (
-    <div className="min-h-screen overflow-hidden relative bg-gradient-to-br from-orange-50 via-white to-amber-50">
+    <div className="min-h-screen overflow-hidden relative bg-background">
       
       {/* S-Shaped Wave with Matte Glass Glow */}
       <div className="absolute inset-0 pointer-events-none">
