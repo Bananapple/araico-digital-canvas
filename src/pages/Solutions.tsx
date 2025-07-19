@@ -45,7 +45,7 @@ const Solutions = () => {
     },
     {
       title: "AI-Native Companies",
-      description: "Fast-growing startups building entirely on AI-first infrastructure.",
+      description: "Fast-growing startups building entirely on AI-first infrastructure with scalable solutions.",
       icon: Zap
     },
     {
@@ -58,7 +58,7 @@ const Solutions = () => {
   const whyAraico = [
     {
       title: "Sustainability",
-      description: "100% clean energy powering all operations.",
+      description: "100% clean energy powering all operations with environmental responsibility at our core.",
       icon: Leaf
     },
     {
@@ -68,7 +68,7 @@ const Solutions = () => {
     },
     {
       title: "Cutting-Edge Technology",
-      description: "Modular, efficient, and scalable infrastructure built for the AI era.",
+      description: "Modular, efficient, and scalable infrastructure built for the AI era with advanced capabilities.",
       icon: Globe
     }
   ];
