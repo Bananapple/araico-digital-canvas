@@ -234,15 +234,15 @@ const Solutions = () => {
             <div className="w-3/5">
               <div className="grid gap-1">
                 {industries.map((industry, index) => (
-                  <Card key={index} className="bg-card border-gray-300 scale-75 -my-8">
-                    <CardHeader className="pb-4">
-                      <div className="mx-auto w-16 h-16 rounded-full bg-gradient-primary flex items-center justify-center mb-4">
-                        <industry.icon className="w-8 h-8 text-white" />
+                  <Card key={index} className="bg-card border-gray-300">
+                    <CardHeader className="pb-1 p-4">
+                      <div className="mx-auto w-12 h-12 rounded-full bg-gradient-primary flex items-center justify-center mb-2">
+                        <industry.icon className="w-6 h-6 text-white" />
                       </div>
-                      <CardTitle className="text-xl text-primary font-bold">{industry.title}</CardTitle>
+                      <CardTitle className="text-lg text-primary font-bold text-center">{industry.title}</CardTitle>
                     </CardHeader>
-                    <CardContent className="pt-0">
-                      <CardDescription className="text-muted-foreground">
+                    <CardContent className="pt-0 p-4 text-center">
+                      <CardDescription className="text-sm text-muted-foreground">
                         {industry.description}
                       </CardDescription>
                     </CardContent>
@@ -263,15 +263,15 @@ const Solutions = () => {
             
             <div className="grid gap-1 max-w-4xl mx-auto">
               {industries.map((industry, index) => (
-                <Card key={index} className="bg-card border-gray-300 scale-75 -my-8">
-                  <CardHeader className="pb-4">
-                    <div className="mx-auto w-16 h-16 rounded-full bg-gradient-primary flex items-center justify-center mb-4">
-                      <industry.icon className="w-8 h-8 text-white" />
+                <Card key={index} className="bg-card border-gray-300">
+                  <CardHeader className="pb-1 p-4">
+                    <div className="mx-auto w-12 h-12 rounded-full bg-gradient-primary flex items-center justify-center mb-2">
+                      <industry.icon className="w-6 h-6 text-white" />
                     </div>
-                    <CardTitle className="text-xl text-primary font-bold">{industry.title}</CardTitle>
+                    <CardTitle className="text-lg text-primary font-bold text-center">{industry.title}</CardTitle>
                   </CardHeader>
-                  <CardContent className="pt-0">
-                    <CardDescription className="text-muted-foreground">
+                  <CardContent className="pt-0 p-4 text-center">
+                    <CardDescription className="text-sm text-muted-foreground">
                       {industry.description}
                     </CardDescription>
                   </CardContent>
@@ -301,15 +301,15 @@ const Solutions = () => {
             <div className="w-3/5">
               <div className="grid gap-1">
                 {whyAraico.map((item, index) => (
-                  <Card key={index} className="bg-card border-gray-300 scale-75 -my-8">
-                    <CardHeader className="pb-4">
-                      <div className="mx-auto w-16 h-16 rounded-full bg-gradient-primary flex items-center justify-center mb-4">
-                        <item.icon className="w-8 h-8 text-white" />
+                  <Card key={index} className="bg-card border-gray-300">
+                    <CardHeader className="pb-1 p-4">
+                      <div className="mx-auto w-12 h-12 rounded-full bg-gradient-primary flex items-center justify-center mb-2">
+                        <item.icon className="w-6 h-6 text-white" />
                       </div>
-                      <CardTitle className="text-xl text-primary font-bold">{item.title}</CardTitle>
+                      <CardTitle className="text-lg text-primary font-bold text-center">{item.title}</CardTitle>
                     </CardHeader>
-                    <CardContent className="pt-0">
-                      <CardDescription className="text-muted-foreground">
+                    <CardContent className="pt-0 p-4 text-center">
+                      <CardDescription className="text-sm text-muted-foreground">
                         {item.description}
                       </CardDescription>
                     </CardContent>
@@ -330,15 +330,15 @@ const Solutions = () => {
             
             <div className="grid gap-1 max-w-4xl mx-auto">
               {whyAraico.map((item, index) => (
-                <Card key={index} className="bg-card border-gray-300 scale-75 -my-8">
-                  <CardHeader className="pb-4">
-                    <div className="mx-auto w-16 h-16 rounded-full bg-gradient-primary flex items-center justify-center mb-4">
-                      <item.icon className="w-8 h-8 text-white" />
+                <Card key={index} className="bg-card border-gray-300">
+                  <CardHeader className="pb-1 p-4">
+                    <div className="mx-auto w-12 h-12 rounded-full bg-gradient-primary flex items-center justify-center mb-2">
+                      <item.icon className="w-6 h-6 text-white" />
                     </div>
-                    <CardTitle className="text-xl text-primary font-bold">{item.title}</CardTitle>
+                    <CardTitle className="text-lg text-primary font-bold text-center">{item.title}</CardTitle>
                   </CardHeader>
-                  <CardContent className="pt-0">
-                    <CardDescription className="text-muted-foreground">
+                  <CardContent className="pt-0 p-4 text-center">
+                    <CardDescription className="text-sm text-muted-foreground">
                       {item.description}
                     </CardDescription>
                   </CardContent>
