@@ -3,7 +3,14 @@ import Header from "@/components/Header";
 
 const Index = () => {
   return (
-    <div className="min-h-screen overflow-hidden relative" style={{ background: 'radial-gradient(ellipse at left, #ff6b35 0%, #ff8c42 25%, #ffa726 50%, #fff3e0 75%, #ffffff 100%)' }}>
+    <div className="min-h-screen overflow-hidden relative bg-gradient-to-r from-orange-400 via-amber-300 to-orange-200">
+      
+      {/* Animated Wave Pattern */}
+      <div className="wave-container">
+        <div className="wave wave1"></div>
+        <div className="wave wave2"></div>
+        <div className="wave wave3"></div>
+      </div>
       
       <Header />
       
