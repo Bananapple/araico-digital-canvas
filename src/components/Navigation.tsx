@@ -31,9 +31,9 @@ const Navigation = () => {
         ))}
         <Button 
           asChild 
-          className="gradient-primary hover:gradient-hover text-white border-0 hover-lift"
+          className="bg-foreground text-background hover:bg-foreground/90 rounded-full px-6 py-2 font-medium border-0 hover-lift"
         >
-          <NavLink to="/contact">CONTACT US</NavLink>
+          <NavLink to="/contact">Contact Us</NavLink>
         </Button>
       </nav>
 
@@ -82,10 +82,10 @@ const Navigation = () => {
                 
                 <Button 
                   asChild 
-                  className="gradient-primary hover:gradient-hover text-white border-0 mt-6 w-full"
+                  className="bg-foreground text-background hover:bg-foreground/90 rounded-full px-6 py-2 font-medium border-0 mt-6 w-full"
                 >
                   <NavLink to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
-                    CONTACT US
+                    Contact Us
                   </NavLink>
                 </Button>
               </div>

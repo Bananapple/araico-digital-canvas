@@ -8,18 +8,18 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Dark theme for Araico */
-    --background: 220 13% 6%;
-    --foreground: 210 40% 98%;
+    /* Off-white background like Cohere */
+    --background: 46 16% 97%;
+    --foreground: 240 10% 3.9%;
 
-    --card: 220 13% 8%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
 
-    --popover: 220 13% 8%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
 
     --primary: 240 100% 70%;
-    --primary-foreground: 220 13% 6%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 220 13% 12%;
     --secondary-foreground: 210 40% 98%;
