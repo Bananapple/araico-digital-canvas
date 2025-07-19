@@ -77,7 +77,7 @@ const Solutions = () => {
     <div className="min-h-screen overflow-hidden relative bg-background">
       
       {/* S-Shaped Wave with Matte Glass Glow */}
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="fixed inset-0 pointer-events-none">
         <svg className="absolute top-[25vh] left-0 w-full h-96" viewBox="0 0 1200 400" preserveAspectRatio="none">
           <defs>
             <filter id="matteGlow" x="-50%" y="-50%" width="200%" height="200%">
