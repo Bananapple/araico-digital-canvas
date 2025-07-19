@@ -123,55 +123,53 @@ const Solutions = () => {
       <div className="container mx-auto px-6 space-y-20">
         
         {/* Flexible Delivery Models */}
-        <section className="relative">
+        <section className="h-screen overflow-hidden">
           {/* Desktop Two-Column Layout */}
-          <div className="hidden md:block">
-            <div className="flex">
-              {/* Left Column - 40% width, Sticky */}
-              <div className="w-2/5 pr-12 flex-shrink-0">
-                <div className="sticky top-20 h-screen flex flex-col justify-center">
-                  <h2 className="text-3xl text-black tracking-tight mb-8">
-                    <span style={{fontFamily: 'Times, "Times New Roman", serif'}} className="italic font-normal">Flexible delivery models</span> adapted to your needs
-                  </h2>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    Choose the perfect infrastructure model that matches your control requirements and operational preferences.
-                  </p>
-                </div>
+          <div className="hidden md:flex h-full">
+            {/* Left Column - 40% width, Fixed */}
+            <div className="w-2/5 h-full flex items-center justify-center px-12 bg-background">
+              <div className="max-w-md">
+                <h2 className="text-3xl text-black tracking-tight mb-8">
+                  <span style={{fontFamily: 'Times, "Times New Roman", serif'}} className="italic font-normal">Flexible delivery models</span> adapted to your needs
+                </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Choose the perfect infrastructure model that matches your control requirements and operational preferences.
+                </p>
               </div>
-              
-              {/* Right Column - 60% width, Scrollable */}
-              <div className="w-3/5 flex-shrink-0">
-                <div className="space-y-16">
-                  {deliveryModels.map((model, index) => (
-                    <div key={index} className="h-screen flex items-center justify-center py-20">
-                      <Card className="w-4/5 bg-card border-gray-300 hover-lift transform scale-75">
-                        <CardHeader>
-                          <CardTitle className="text-2xl text-primary font-bold mb-4">{model.model}</CardTitle>
-                        </CardHeader>
-                        <CardContent className="space-y-6">
-                          <div>
-                            <p className="text-base font-semibold text-foreground mb-2">We Provide:</p>
-                            <p className="text-base text-muted-foreground leading-relaxed">{model.weProvide}</p>
+            </div>
+            
+            {/* Right Column - 60% width, Scrollable */}
+            <div className="w-3/5 h-full overflow-y-auto">
+              <div className="space-y-0">
+                {deliveryModels.map((model, index) => (
+                  <div key={index} className="h-screen flex items-center justify-center px-8">
+                    <Card className="w-4/5 max-w-2xl bg-card border-gray-300 hover-lift transform scale-75">
+                      <CardHeader>
+                        <CardTitle className="text-2xl text-primary font-bold mb-4">{model.model}</CardTitle>
+                      </CardHeader>
+                      <CardContent className="space-y-6">
+                        <div>
+                          <p className="text-base font-semibold text-foreground mb-2">We Provide:</p>
+                          <p className="text-base text-muted-foreground leading-relaxed">{model.weProvide}</p>
+                        </div>
+                        <div>
+                          <p className="text-base font-semibold text-foreground mb-2">You Manage:</p>
+                          <p className="text-base text-muted-foreground leading-relaxed">{model.youManage}</p>
+                        </div>
+                        <div>
+                          <p className="text-base font-semibold text-foreground mb-2">Best For:</p>
+                          <p className="text-base text-muted-foreground leading-relaxed">{model.bestFor}</p>
+                        </div>
+                        <div className="mt-6">
+                          <div className="mb-2">
+                            <span className="text-base font-medium text-foreground">Client Control</span>
                           </div>
-                          <div>
-                            <p className="text-base font-semibold text-foreground mb-2">You Manage:</p>
-                            <p className="text-base text-muted-foreground leading-relaxed">{model.youManage}</p>
-                          </div>
-                          <div>
-                            <p className="text-base font-semibold text-foreground mb-2">Best For:</p>
-                            <p className="text-base text-muted-foreground leading-relaxed">{model.bestFor}</p>
-                          </div>
-                          <div className="mt-6">
-                            <div className="mb-2">
-                              <span className="text-base font-medium text-foreground">Client Control</span>
-                            </div>
-                            <Progress value={(index + 1) * 20} className="h-3" />
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </div>
-                  ))}
-                </div>
+                          <Progress value={(index + 1) * 20} className="h-3" />
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
