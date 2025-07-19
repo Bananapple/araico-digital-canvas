@@ -126,9 +126,9 @@ const Solutions = () => {
         {/* Flexible Delivery Models */}
         <section className="min-h-screen py-20">
           {/* Desktop Two-Column Layout */}
-          <div className="hidden md:flex gap-12 items-start pt-[35vh]">
+          <div className="hidden md:flex gap-12 items-start pt-[25vh]">
             {/* Left Column - Title and Description */}
-            <div className="w-2/5 flex items-start justify-center -mt-20">
+            <div className="w-2/5 flex items-start justify-center -mt-12">
               <div className="max-w-md">
                 <h2 className="text-5xl text-black tracking-tight mb-8">
                   <span style={{fontFamily: 'Times, "Times New Roman", serif'}} className="italic font-normal">Flexible delivery models</span> <span className="font-bold">adapted to your needs</span>
@@ -140,7 +140,7 @@ const Solutions = () => {
             </div>
             
             {/* Right Column - Cards */}
-            <div className="w-3/5 -mt-20">
+            <div className="w-3/5 -mt-12">
               <div className="grid gap-6">
                 {deliveryModels.map((model, index) => (
                   <Card key={index} className="bg-card border-gray-300 hover-lift scale-90">
