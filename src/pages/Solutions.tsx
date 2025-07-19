@@ -125,7 +125,7 @@ const Solutions = () => {
         {/* Flexible Delivery Models */}
         <section className="relative min-h-[200vh]">
           {/* Desktop Two-Column Layout */}
-          <div className="hidden md:flex">
+          <div className="hidden md:flex items-start">
             {/* Left Column - 40% width, Sticky */}
             <div className="w-2/5 sticky top-20 h-screen flex items-center justify-center px-12 self-start">
               <div className="max-w-md">
