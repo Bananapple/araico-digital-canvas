@@ -5,31 +5,45 @@ const Index = () => {
   return (
     <div className="min-h-screen overflow-hidden relative bg-gradient-to-br from-orange-50 via-white to-amber-50">
       
-      {/* Wave Line with Ambient Glow */}
+      {/* S-Shaped Wave with Matte Glass Glow */}
       <div className="absolute inset-0 pointer-events-none">
-        <svg className="absolute top-1/3 left-0 w-full h-32" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <svg className="absolute top-1/4 left-0 w-full h-96" viewBox="0 0 1200 400" preserveAspectRatio="none">
           <defs>
-            <filter id="glow">
-              <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+            <filter id="matteGlow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="12" result="blur1"/>
+              <feGaussianBlur stdDeviation="8" result="blur2"/>
+              <feGaussianBlur stdDeviation="4" result="blur3"/>
               <feMerge> 
-                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="blur1"/>
+                <feMergeNode in="blur2"/>
+                <feMergeNode in="blur3"/>
                 <feMergeNode in="SourceGraphic"/>
               </feMerge>
             </filter>
           </defs>
+          {/* Background glow layers */}
           <path 
-            d="M0,60 C150,30 300,90 450,40 C600,10 750,80 900,50 C1050,20 1150,70 1200,45"
+            d="M0,150 C300,100 400,50 600,100 C800,150 900,200 1200,150"
             stroke="#ff6b35"
-            strokeWidth="3"
+            strokeWidth="20"
             fill="none"
-            filter="url(#glow)"
-            opacity="0.9"
+            filter="url(#matteGlow)"
+            opacity="0.3"
           />
           <path 
-            d="M0,60 C150,30 300,90 450,40 C600,10 750,80 900,50 C1050,20 1150,70 1200,45"
+            d="M0,150 C300,100 400,50 600,100 C800,150 900,200 1200,150"
             stroke="#ff8c42"
-            strokeWidth="1"
+            strokeWidth="12"
             fill="none"
+            filter="url(#matteGlow)"
+            opacity="0.4"
+          />
+          <path 
+            d="M0,150 C300,100 400,50 600,100 C800,150 900,200 1200,150"
+            stroke="#ffa726"
+            strokeWidth="6"
+            fill="none"
+            filter="url(#matteGlow)"
             opacity="0.6"
           />
         </svg>
