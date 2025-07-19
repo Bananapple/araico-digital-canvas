@@ -1,5 +1,6 @@
 
 import Header from "@/components/Header";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
@@ -85,9 +86,11 @@ const Index = () => {
           
           {/* Call to Action */}
           <div className="pt-8">
-            <button className="bg-foreground text-background hover:bg-foreground/90 rounded-full px-8 py-4 text-lg font-medium hover-lift border-0">
-              EXPLORE SOLUTIONS
-            </button>
+            <Link to="/solutions">
+              <button className="bg-foreground text-background hover:bg-foreground/90 rounded-full px-8 py-4 text-lg font-medium hover-lift border-0">
+                EXPLORE SOLUTIONS
+              </button>
+            </Link>
           </div>
         </div>
       </div>
