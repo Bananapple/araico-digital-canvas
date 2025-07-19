@@ -4,13 +4,11 @@ import Header from "@/components/Header";
 const Index = () => {
   return (
     <div className="min-h-screen overflow-hidden bg-background relative">
-      {/* Animated Wave Background Effect */}
-      <div className="fixed inset-0 -z-10 overflow-hidden">
-        <div className="wave-container">
-          <div className="wave wave1"></div>
-          <div className="wave wave2"></div>
-          <div className="wave wave3"></div>
-        </div>
+      {/* Static Ambient Background Effect - matching Lovable template */}
+      <div className="fixed inset-0 -z-10">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-orange-200/20 via-transparent to-orange-300/10"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-400/15 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-amber-300/10 rounded-full blur-3xl"></div>
       </div>
       
       <Header />
