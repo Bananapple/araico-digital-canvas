@@ -125,41 +125,92 @@ const Solutions = () => {
         
         {/* Flexible Delivery Models */}
         <section>
-          <h2 className="text-4xl text-center mb-8 text-black tracking-tight">
-            <span style={{fontFamily: 'Times, "Times New Roman", serif'}} className="italic font-normal">Flexible delivery models</span> <span className="font-bold">adapted to your needs</span>
-          </h2>
-          <p className="text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-            Choose the perfect infrastructure model that matches your control requirements and operational preferences.
-          </p>
-          
-          <div className="grid gap-6 max-w-4xl mx-auto">
-            {deliveryModels.map((model, index) => (
-              <Card key={index} className="bg-card border-gray-300 hover-lift">
-                <CardHeader className="pb-2">
-                  <CardTitle className="text-2xl text-primary font-bold mb-4">{model.model}</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-6 pt-0">
-                  <div>
-                    <p className="text-base font-semibold text-foreground mb-2">We Provide:</p>
-                    <p className="text-base text-muted-foreground leading-relaxed">{model.weProvide}</p>
-                  </div>
-                  <div>
-                    <p className="text-base font-semibold text-foreground mb-2">You Manage:</p>
-                    <p className="text-base text-muted-foreground leading-relaxed">{model.youManage}</p>
-                  </div>
-                  <div>
-                    <p className="text-base font-semibold text-foreground mb-2">Best For:</p>
-                    <p className="text-base text-muted-foreground leading-relaxed">{model.bestFor}</p>
-                  </div>
-                  <div className="mt-4">
-                    <div className="mb-2">
-                      <span className="text-base font-medium text-foreground">Client Control</span>
+          {/* Desktop Two-Column Layout */}
+          <div className="hidden md:flex gap-12">
+            {/* Left Column - Title and Description */}
+            <div className="w-2/5 flex items-start justify-center">
+              <div className="max-w-md pt-8">
+                <h2 className="text-5xl text-black tracking-tight mb-8">
+                  <span style={{fontFamily: 'Times, "Times New Roman", serif'}} className="italic font-normal">Flexible delivery models</span> <span className="font-bold">adapted to your needs</span>
+                </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Choose the perfect infrastructure model that matches your control requirements and operational preferences.
+                </p>
+              </div>
+            </div>
+            
+            {/* Right Column - Cards */}
+            <div className="w-3/5">
+              <div className="grid gap-6">
+                {deliveryModels.map((model, index) => (
+                  <Card key={index} className="bg-card border-gray-300 hover-lift">
+                    <CardHeader className="pb-2">
+                      <CardTitle className="text-2xl text-primary font-bold mb-4">{model.model}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-6 pt-0">
+                      <div>
+                        <p className="text-base font-semibold text-foreground mb-2">We Provide:</p>
+                        <p className="text-base text-muted-foreground leading-relaxed">{model.weProvide}</p>
+                      </div>
+                      <div>
+                        <p className="text-base font-semibold text-foreground mb-2">You Manage:</p>
+                        <p className="text-base text-muted-foreground leading-relaxed">{model.youManage}</p>
+                      </div>
+                      <div>
+                        <p className="text-base font-semibold text-foreground mb-2">Best For:</p>
+                        <p className="text-base text-muted-foreground leading-relaxed">{model.bestFor}</p>
+                      </div>
+                      <div className="mt-4">
+                        <div className="mb-2">
+                          <span className="text-base font-medium text-foreground">Client Control</span>
+                        </div>
+                        <Progress value={(index + 1) * 20} className="h-3" />
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile Layout */}
+          <div className="md:hidden">
+            <h2 className="text-3xl text-center mb-8 text-black tracking-tight">
+              <span style={{fontFamily: 'Times, "Times New Roman", serif'}} className="italic font-normal">Flexible delivery models</span> <span className="font-bold">adapted to your needs</span>
+            </h2>
+            <p className="text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
+              Choose the perfect infrastructure model that matches your control requirements and operational preferences.
+            </p>
+            
+            <div className="grid gap-6 max-w-4xl mx-auto">
+              {deliveryModels.map((model, index) => (
+                <Card key={index} className="bg-card border-gray-300 hover-lift">
+                  <CardHeader className="pb-2">
+                    <CardTitle className="text-2xl text-primary font-bold mb-4">{model.model}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-6 pt-0">
+                    <div>
+                      <p className="text-base font-semibold text-foreground mb-2">We Provide:</p>
+                      <p className="text-base text-muted-foreground leading-relaxed">{model.weProvide}</p>
                     </div>
-                    <Progress value={(index + 1) * 20} className="h-3" />
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                    <div>
+                      <p className="text-base font-semibold text-foreground mb-2">You Manage:</p>
+                      <p className="text-base text-muted-foreground leading-relaxed">{model.youManage}</p>
+                    </div>
+                    <div>
+                      <p className="text-base font-semibold text-foreground mb-2">Best For:</p>
+                      <p className="text-base text-muted-foreground leading-relaxed">{model.bestFor}</p>
+                    </div>
+                    <div className="mt-4">
+                      <div className="mb-2">
+                        <span className="text-base font-medium text-foreground">Client Control</span>
+                      </div>
+                      <Progress value={(index + 1) * 20} className="h-3" />
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </section>
 
