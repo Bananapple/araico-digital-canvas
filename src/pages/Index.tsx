@@ -6,9 +6,9 @@ const Index = () => {
     <div className="min-h-screen overflow-hidden bg-background relative">
       {/* Gradient Background Effect */}
       <div className="fixed inset-0 -z-10">
-        <div className="absolute top-10 left-1/4 w-[500px] h-[500px] bg-gradient-to-br from-cyan-400/30 to-blue-500/30 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-gradient-to-br from-blue-400/25 to-cyan-500/25 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-1/4 left-1/3 w-[350px] h-[350px] bg-gradient-to-br from-blue-500/30 to-cyan-400/30 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-10 left-1/4 w-[500px] h-[500px] bg-gradient-to-br from-cyan-400/60 to-blue-500/60 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-gradient-to-br from-blue-400/50 to-cyan-500/50 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-1/4 left-1/3 w-[350px] h-[350px] bg-gradient-to-br from-blue-500/60 to-cyan-400/60 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
       
       <Header />
