@@ -36,7 +36,7 @@ const Index = () => {
               attributeType="XML"
               type="translate"
               values="0 0; 15 -5; 0 0; -10 5; 0 0"
-              dur="12s"
+              dur="6s"
               repeatCount="indefinite"
             />
             <path 
