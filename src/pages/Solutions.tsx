@@ -260,8 +260,8 @@ const Solutions = () => {
 
         {/* Industries We Target */}
         <section>
-          <h2 className="text-3xl font-bold text-center mb-12 text-black tracking-tight">
-            Industries we target
+          <h2 className="text-3xl md:text-5xl text-center mb-12 text-black tracking-tight">
+            <span className="font-bold">We're serving customer across the</span> <span style={{fontFamily: 'Times, "Times New Roman", serif'}} className="italic font-normal">AI landscape</span>
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {industries.map((industry, index) => (
@@ -284,8 +284,8 @@ const Solutions = () => {
 
         {/* Why Araico */}
         <section>
-          <h2 className="text-3xl font-bold text-center mb-12 text-black tracking-tight">
-            Why Araico?
+          <h2 className="text-3xl md:text-5xl text-center mb-12 text-black tracking-tight">
+            <span className="font-bold">Araico:</span> <span style={{fontFamily: 'Times, "Times New Roman", serif'}} className="italic font-normal">the preferred partner</span> <span className="font-bold">in one of the most attractive regions globally for AI</span>
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {whyAraico.map((item, index) => (
