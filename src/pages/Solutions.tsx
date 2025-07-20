@@ -140,12 +140,9 @@ const Solutions = () => {
           </div>
 
           {/* Desktop Two-Column Layout */}
-          <div className="hidden md:flex gap-12 items-center">
-            {/* Left Column - Spacer */}
-            <div className="w-2/5"></div>
-            
-            {/* Right Column - Cards */}
-            <div className="w-3/5">
+          <div className="hidden md:block relative">
+            {/* Right Column - Cards positioned to align with sticky header */}
+            <div className="absolute top-1/2 -translate-y-1/2 left-[calc(40%+3rem)] w-[calc(60%-3rem)]">
               <div className="grid gap-1">
                 {deliveryModels.map((model, index) => (
                   <Card key={index} className="bg-card border-gray-300 scale-75 -my-8">
@@ -236,12 +233,9 @@ const Solutions = () => {
           </div>
 
           {/* Desktop Two-Column Layout */}
-          <div className="hidden md:flex gap-12 items-center">
-            {/* Left Column - Spacer */}
-            <div className="w-2/5"></div>
-            
-            {/* Right Column - Cards */}
-            <div className="w-3/5">
+          <div className="hidden md:block relative">
+            {/* Right Column - Cards positioned to align with sticky header */}
+            <div className="absolute top-1/2 -translate-y-1/2 left-[calc(40%+3rem)] w-[calc(60%-3rem)]">
               <div className="grid gap-1">
                 {industries.map((industry, index) => (
                   <Card key={index} className="bg-card border-gray-300 scale-75 -my-4">
@@ -308,12 +302,9 @@ const Solutions = () => {
           </div>
 
           {/* Desktop Two-Column Layout */}
-          <div className="hidden md:flex gap-12 items-center">
-            {/* Left Column - Spacer */}
-            <div className="w-2/5"></div>
-            
-            {/* Right Column - Cards */}
-            <div className="w-3/5">
+          <div className="hidden md:block relative">
+            {/* Right Column - Cards positioned to align with sticky header */}
+            <div className="absolute top-1/2 -translate-y-1/2 left-[calc(40%+3rem)] w-[calc(60%-3rem)]">
               <div className="grid gap-1">
                 {whyAraico.map((item, index) => (
                   <Card key={index} className="bg-card border-gray-300 scale-75 -my-4">
