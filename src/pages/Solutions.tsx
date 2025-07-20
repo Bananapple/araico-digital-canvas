@@ -129,7 +129,7 @@ const Solutions = () => {
           <div className="hidden md:flex gap-12 items-start pt-[25vh]">
             {/* Left Column - Title and Description */}
             <div className="w-2/5 flex items-start justify-center -mt-12">
-              <div className="max-w-md sticky top-24 z-50 bg-background/95 backdrop-blur-sm rounded-lg p-4">
+              <div className="max-w-md sticky top-24 z-50">
                 <h2 className="text-5xl text-black tracking-tight mb-8">
                   <span style={{fontFamily: 'Times, "Times New Roman", serif'}} className="italic font-normal">Flexible delivery models</span> <span className="font-bold">adapted to your needs</span>
                 </h2>
@@ -220,7 +220,7 @@ const Solutions = () => {
           <div className="hidden md:flex gap-12 items-start">
             {/* Left Column - Title and Description */}
             <div className="w-2/5 flex items-start justify-center">
-              <div className="max-w-md sticky top-24 z-50 bg-background/95 backdrop-blur-sm rounded-lg p-4">
+              <div className="max-w-md sticky top-24 z-50">
                 <h2 className="text-5xl text-black tracking-tight mb-8">
                   <span className="font-bold">Industries we target</span>
                 </h2>
@@ -287,7 +287,7 @@ const Solutions = () => {
           <div className="hidden md:flex gap-12 items-start">
             {/* Left Column - Title and Description */}
             <div className="w-2/5 flex items-start justify-center">
-              <div className="max-w-md sticky top-24 z-50 bg-background/95 backdrop-blur-sm rounded-lg p-4">
+              <div className="max-w-md sticky top-24 z-50">
                 <h2 className="text-5xl text-black tracking-tight mb-8">
                   <span className="font-bold">Why Araico?</span>
                 </h2>
