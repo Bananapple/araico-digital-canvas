@@ -140,7 +140,7 @@ const Solutions = () => {
           </div>
 
           {/* Desktop Two-Column Layout */}
-          <div className="hidden md:flex gap-12 items-start pt-8">
+          <div className="hidden md:flex gap-12 items-start pt-96">
             {/* Left Column - Spacer */}
             <div className="w-2/5"></div>
             
@@ -236,7 +236,7 @@ const Solutions = () => {
           </div>
 
           {/* Desktop Two-Column Layout */}
-          <div className="hidden md:flex gap-12 items-start pt-8">
+          <div className="hidden md:flex gap-12 items-start pt-96">
             {/* Left Column - Spacer */}
             <div className="w-2/5"></div>
             
@@ -308,7 +308,7 @@ const Solutions = () => {
           </div>
 
           {/* Desktop Two-Column Layout */}
-          <div className="hidden md:flex gap-12 items-start pt-8">
+          <div className="hidden md:flex gap-12 items-start pt-96">
             {/* Left Column - Spacer */}
             <div className="w-2/5"></div>
             
