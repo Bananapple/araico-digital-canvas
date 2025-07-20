@@ -124,7 +124,10 @@ const Solutions = () => {
       <div className="container mx-auto px-6 space-y-20">
         
         {/* Flexible Delivery Models */}
-        <section className="min-h-screen py-20 pb-40 relative">
+        <section className="relative" style={{ minHeight: '200vh' }}>
+          {/* Spacing before sticky header activates */}
+          <div className="h-screen"></div>
+          
           {/* Sticky Header */}
           <div className="sticky top-1/2 -translate-y-1/2 z-40">
             <div className="container mx-auto px-6">
@@ -140,7 +143,7 @@ const Solutions = () => {
           </div>
 
           {/* Desktop Two-Column Layout */}
-          <div className="hidden md:flex gap-12 items-start pt-96">
+          <div className="hidden md:flex gap-12 items-start pt-24">
             {/* Left Column - Spacer */}
             <div className="w-2/5"></div>
             
@@ -220,7 +223,10 @@ const Solutions = () => {
         </section>
 
         {/* Industries We Target */}
-        <section className="min-h-screen py-40 pb-40 relative">
+        <section className="relative" style={{ minHeight: '200vh' }}>
+          {/* Spacing before sticky header activates */}
+          <div className="h-screen"></div>
+          
           {/* Sticky Header */}
           <div className="sticky top-1/2 -translate-y-1/2 z-40">
             <div className="container mx-auto px-6">
@@ -236,7 +242,7 @@ const Solutions = () => {
           </div>
 
           {/* Desktop Two-Column Layout */}
-          <div className="hidden md:flex gap-12 items-start pt-96">
+          <div className="hidden md:flex gap-12 items-start pt-24">
             {/* Left Column - Spacer */}
             <div className="w-2/5"></div>
             
@@ -292,7 +298,10 @@ const Solutions = () => {
         </section>
 
         {/* Why Araico */}
-        <section className="min-h-screen py-40 pb-40 relative">
+        <section className="relative" style={{ minHeight: '200vh' }}>
+          {/* Spacing before sticky header activates */}
+          <div className="h-screen"></div>
+          
           {/* Sticky Header */}
           <div className="sticky top-1/2 -translate-y-1/2 z-40">
             <div className="container mx-auto px-6">
@@ -308,7 +317,7 @@ const Solutions = () => {
           </div>
 
           {/* Desktop Two-Column Layout */}
-          <div className="hidden md:flex gap-12 items-start pt-96">
+          <div className="hidden md:flex gap-12 items-start pt-24">
             {/* Left Column - Spacer */}
             <div className="w-2/5"></div>
             
