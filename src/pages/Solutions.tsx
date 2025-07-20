@@ -124,7 +124,7 @@ const Solutions = () => {
       <div className="container mx-auto px-6 space-y-20">
         
         {/* Flexible Delivery Models */}
-        <section className="min-h-screen py-20 relative">
+        <section className="min-h-screen py-20 pb-40 relative">
           {/* Sticky Header */}
           <div className="sticky top-1/2 -translate-y-1/2 z-40">
             <div className="container mx-auto px-6">
@@ -220,7 +220,7 @@ const Solutions = () => {
         </section>
 
         {/* Industries We Target */}
-        <section className="min-h-screen py-20 relative">
+        <section className="min-h-screen py-40 pb-40 relative">
           {/* Sticky Header */}
           <div className="sticky top-1/2 -translate-y-1/2 z-40">
             <div className="container mx-auto px-6">
@@ -292,7 +292,7 @@ const Solutions = () => {
         </section>
 
         {/* Why Araico */}
-        <section className="min-h-screen py-20 relative">
+        <section className="min-h-screen py-40 pb-40 relative">
           {/* Sticky Header */}
           <div className="sticky top-1/2 -translate-y-1/2 z-40">
             <div className="container mx-auto px-6">
