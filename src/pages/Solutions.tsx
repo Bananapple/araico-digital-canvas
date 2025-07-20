@@ -126,7 +126,7 @@ const Solutions = () => {
         {/* Flexible Delivery Models */}
         <section className="min-h-screen py-20 relative">
           {/* Sticky Header */}
-          <div className="sticky top-20 z-40 bg-background/95 backdrop-blur-sm">
+          <div className="sticky top-1/2 -translate-y-1/2 z-40">
             <div className="container mx-auto px-6">
               <div className="w-2/5">
                 <h2 className="text-5xl text-black tracking-tight mb-4">
@@ -222,7 +222,7 @@ const Solutions = () => {
         {/* Industries We Target */}
         <section className="min-h-screen py-20 relative">
           {/* Sticky Header */}
-          <div className="sticky top-20 z-40 bg-background/95 backdrop-blur-sm">
+          <div className="sticky top-1/2 -translate-y-1/2 z-40">
             <div className="container mx-auto px-6">
               <div className="w-2/5">
                 <h2 className="text-5xl text-black tracking-tight mb-4">
@@ -294,7 +294,7 @@ const Solutions = () => {
         {/* Why Araico */}
         <section className="min-h-screen py-20 relative">
           {/* Sticky Header */}
-          <div className="sticky top-20 z-40 bg-background/95 backdrop-blur-sm">
+          <div className="sticky top-1/2 -translate-y-1/2 z-40">
             <div className="container mx-auto px-6">
               <div className="w-2/5">
                 <h2 className="text-5xl text-black tracking-tight mb-4">
@@ -362,6 +362,9 @@ const Solutions = () => {
             </div>
           </div>
         </section>
+
+        {/* Extra space for scrolling */}
+        <div className="h-screen"></div>
       </div>
       </div>
     </div>
