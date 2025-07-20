@@ -74,7 +74,7 @@ const Solutions = () => {
   ];
 
   return (
-    <div className="min-h-screen overflow-hidden relative bg-background">
+    <div className="min-h-screen relative bg-background">
       
       {/* S-Shaped Wave with Matte Glass Glow */}
       <div className="fixed inset-0 pointer-events-none">
