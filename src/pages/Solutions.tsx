@@ -124,7 +124,7 @@ const Solutions = () => {
       <div className="container mx-auto px-6 space-y-20">
         
         {/* Flexible Delivery Models */}
-        <section className="min-h-screen py-20 relative">
+        <section className="h-[150vh] py-20 relative">
           {/* Sticky Header */}
           <div className="sticky top-1/2 -translate-y-1/2 z-40">
             <div className="container mx-auto px-6">
@@ -142,7 +142,7 @@ const Solutions = () => {
           {/* Desktop Two-Column Layout */}
           <div className="hidden md:block relative">
             {/* Right Column - Cards positioned to align with sticky header */}
-            <div className="absolute top-1/2 -translate-y-1/2 left-[calc(40%+3rem)] w-[calc(60%-3rem)]">
+            <div className="absolute top-1/2 -translate-y-1/2 left-[calc(40%+3rem)] w-[calc(60%-3rem)] mt-16">
               <div className="grid gap-1">
                 {deliveryModels.map((model, index) => (
                   <Card key={index} className="bg-card border-gray-300 scale-75 -my-8">
@@ -217,7 +217,7 @@ const Solutions = () => {
         </section>
 
         {/* Industries We Target */}
-        <section className="min-h-screen py-20 relative">
+        <section className="h-[150vh] py-20 relative mt-32">
           {/* Sticky Header */}
           <div className="sticky top-1/2 -translate-y-1/2 z-40">
             <div className="container mx-auto px-6">
@@ -286,7 +286,7 @@ const Solutions = () => {
         </section>
 
         {/* Why Araico */}
-        <section className="min-h-screen py-20 relative">
+        <section className="h-[120vh] py-20 relative mt-32">
           {/* Sticky Header */}
           <div className="sticky top-1/2 -translate-y-1/2 z-40">
             <div className="container mx-auto px-6">
