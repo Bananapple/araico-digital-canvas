@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Building, Zap, MapPin } from "lucide-react";
+import { useEffect, useRef } from "react";
 
 const Company = () => {
   const stats = [
@@ -8,10 +9,36 @@ const Company = () => {
     { value: "40 MW", label: "Energized or Committed", icon: MapPin }
   ];
 
-  // Mock partner logos - in real implementation, these would be actual logo URLs
-  const partners = [
-    "Partner 1", "Partner 2", "Partner 3", "Partner 4", "Partner 5", "Partner 6"
-  ];
+  // Carousel logic
+  const carouselRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const carousel = carouselRef.current;
+    if (!carousel) return;
+    let animationFrame: number;
+    let isHovered = false;
+    let scrollAmount = 0;
+    const speed = 1; // px per frame
+    const scroll = () => {
+      if (!isHovered) {
+        carousel.scrollLeft += speed;
+        // If we've scrolled to the end, reset to start for infinite loop
+        if (carousel.scrollLeft + carousel.offsetWidth >= carousel.scrollWidth) {
+          carousel.scrollLeft = 0;
+        }
+      }
+      animationFrame = requestAnimationFrame(scroll);
+    };
+    scroll();
+    const handleMouseEnter = () => { isHovered = true; };
+    const handleMouseLeave = () => { isHovered = false; };
+    carousel.addEventListener('mouseenter', handleMouseEnter);
+    carousel.addEventListener('mouseleave', handleMouseLeave);
+    return () => {
+      cancelAnimationFrame(animationFrame);
+      carousel.removeEventListener('mouseenter', handleMouseEnter);
+      carousel.removeEventListener('mouseleave', handleMouseLeave);
+    };
+  }, []);
 
   return (
     <div className="min-h-screen overflow-hidden relative bg-background">
@@ -66,18 +93,17 @@ const Company = () => {
           
           {/* Header */}
           <div className="text-center">
-            <h1 className="text-3xl font-bold mb-8 text-black">
-              COMPANY
+            <h1 className="text-5xl md:text-5xl font-bold mb-8 text-black">
+              Company and <span style={{fontFamily: 'Times, "Times New Roman", serif'}} className="italic font-normal">Vision</span>
             </h1>
           </div>
 
           {/* Company Blurb */}
           <section className="text-center">
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              We are enabling flexible, scalable, and sustainable data centers with excellence, 
-              through reliable and high-quality solutions, allowing our clients to expand their 
-              businesses efficiently and quickly, keeping pace with technological innovation, 
-              digital transformation, and leaving a lasting legacy for society.
+              Araico is building the premier hub for AI infrastructure in Latin America. In partnership with industry leaders, we are developing a network of world-class, interconnected data centers grounded in operational excellence, technological innovation, and an unwavering commitment to security and sustainability.
+              <br /><br />
+              The rise of AI is reshaping industries, geopolitics, and the climate. We see this transformation not just as an opportunity, but as a responsibility. As builders at the frontier, we are committed to creating sustainable infrastructure that safeguards our planet while enabling the next wave of technological progress. At the same time, we're passionate about bringing cutting-edge solutions to Latin America and helping cultivate a thriving AI ecosystem across one of the most dynamic regions in the world.
             </p>
           </section>
 
@@ -107,36 +133,27 @@ const Company = () => {
 
           {/* Partners */}
           <section>
-            <h2 className="text-3xl font-bold text-center mb-12 text-black">
-              PARTNERS
+            <h2 className="text-3xl md:text-5xl text-center mb-12 text-black tracking-tight">
+              <span className="font-bold">Differentiated platform leveraging </span><span style={{fontFamily: 'Times, "Times New Roman", serif'}} className="italic font-normal">close partnerships</span>
             </h2>
-            
-            {/* Desktop Grid */}
-            <div className="hidden md:grid grid-cols-3 gap-8">
-              {partners.map((partner, index) => (
-                <Card key={index} className="bg-card border-gray-300 hover-lift">
-                  <CardContent className="p-8 flex items-center justify-center">
-                    <div className="text-lg font-medium text-muted-foreground">
-                      {partner}
-                    </div>
-                  </CardContent>
-                </Card>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12 text-center">
+              The Araico platform is built on a well-defined governance structure combining infrastructure private equity capital and a network of partners of global investment banks and financial institutions, technology and service providers, as well as sector experts and senior advisors. This gives us unparralleled reach and the ability to act swiftly.
+            </p>
+            {/* Partner Logos Carousel */}
+            <div
+              ref={carouselRef}
+              className="flex space-x-20 overflow-x-auto pb-4 scrollbar-hide justify-center items-center relative"
+              style={{ scrollBehavior: 'smooth', minHeight: '100px', cursor: 'grab' }}
+            >
+              {Array(2).fill(['amd.png', 'apcgr.png', 'covegr.png', 'nvidia.png', 'modular.png', 'macq.png']).flat().map((logo, idx) => (
+                <img
+                  key={idx}
+                  src={`/${logo}`}
+                  alt={logo.replace('.png', '')}
+                  className="h-20 w-auto object-contain flex-shrink-0 transition-transform duration-300 hover:scale-105 mx-10"
+                  style={{ maxWidth: '160px' }}
+                />
               ))}
-            </div>
-
-            {/* Mobile Carousel */}
-            <div className="md:hidden">
-              <div className="flex space-x-4 overflow-x-auto pb-4 scrollbar-hide">
-                {partners.map((partner, index) => (
-                  <Card key={index} className="bg-card border-gray-300 flex-shrink-0 w-48">
-                    <CardContent className="p-6 flex items-center justify-center">
-                      <div className="text-sm font-medium text-muted-foreground text-center">
-                        {partner}
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
             </div>
           </section>
         </div>

@@ -58,7 +58,7 @@ const Projects = () => {
       <div className="pt-20 pb-16 relative z-10">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl font-bold text-center mb-4 text-black">
+          <h1 className="text-5xl md:text-5xl font-bold text-center mb-4 text-black">
             PROJECTS
           </h1>
           <p className="text-xl text-center text-muted-foreground mb-16">
