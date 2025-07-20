@@ -124,23 +124,28 @@ const Solutions = () => {
       <div className="container mx-auto px-6 space-y-20">
         
         {/* Flexible Delivery Models */}
-        <section className="min-h-screen py-20">
-          {/* Desktop Two-Column Layout */}
-          <div className="hidden md:flex gap-12 items-start pt-[25vh]">
-            {/* Left Column - Title and Description */}
-            <div className="w-2/5 flex items-start justify-center -mt-12">
-              <div className="max-w-md">
-                <h2 className="text-5xl text-black tracking-tight mb-8">
+        <section className="min-h-screen py-20 relative">
+          {/* Sticky Header */}
+          <div className="sticky top-20 z-40 bg-background/95 backdrop-blur-sm">
+            <div className="container mx-auto px-6">
+              <div className="w-2/5">
+                <h2 className="text-5xl text-black tracking-tight mb-4">
                   <span style={{fontFamily: 'Times, "Times New Roman", serif'}} className="italic font-normal">Flexible delivery models</span> <span className="font-bold">adapted to your needs</span>
                 </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
                   Choose the perfect infrastructure model that matches your control requirements and operational preferences.
                 </p>
               </div>
             </div>
+          </div>
+
+          {/* Desktop Two-Column Layout */}
+          <div className="hidden md:flex gap-12 items-start pt-8">
+            {/* Left Column - Spacer */}
+            <div className="w-2/5"></div>
             
             {/* Right Column - Cards */}
-            <div className="w-3/5 -mt-12">
+            <div className="w-3/5">
               <div className="grid gap-1">
                 {deliveryModels.map((model, index) => (
                   <Card key={index} className="bg-card border-gray-300 scale-75 -my-8">
@@ -215,20 +220,25 @@ const Solutions = () => {
         </section>
 
         {/* Industries We Target */}
-        <section className="min-h-screen py-20">
-          {/* Desktop Two-Column Layout */}
-          <div className="hidden md:flex gap-12 items-start">
-            {/* Left Column - Title and Description */}
-            <div className="w-2/5 flex items-start justify-center">
-              <div className="max-w-md">
-                <h2 className="text-5xl text-black tracking-tight mb-8">
+        <section className="min-h-screen py-20 relative">
+          {/* Sticky Header */}
+          <div className="sticky top-20 z-40 bg-background/95 backdrop-blur-sm">
+            <div className="container mx-auto px-6">
+              <div className="w-2/5">
+                <h2 className="text-5xl text-black tracking-tight mb-4">
                   <span className="font-bold">Industries we target</span>
                 </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
                   Specialized infrastructure solutions for AI-driven organizations and enterprises.
                 </p>
               </div>
             </div>
+          </div>
+
+          {/* Desktop Two-Column Layout */}
+          <div className="hidden md:flex gap-12 items-start pt-8">
+            {/* Left Column - Spacer */}
+            <div className="w-2/5"></div>
             
             {/* Right Column - Cards */}
             <div className="w-3/5">
@@ -282,20 +292,25 @@ const Solutions = () => {
         </section>
 
         {/* Why Araico */}
-        <section className="min-h-screen py-20">
-          {/* Desktop Two-Column Layout */}
-          <div className="hidden md:flex gap-12 items-start">
-            {/* Left Column - Title and Description */}
-            <div className="w-2/5 flex items-start justify-center">
-              <div className="max-w-md">
-                <h2 className="text-5xl text-black tracking-tight mb-8">
+        <section className="min-h-screen py-20 relative">
+          {/* Sticky Header */}
+          <div className="sticky top-20 z-40 bg-background/95 backdrop-blur-sm">
+            <div className="container mx-auto px-6">
+              <div className="w-2/5">
+                <h2 className="text-5xl text-black tracking-tight mb-4">
                   <span className="font-bold">Why Araico?</span>
                 </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
                   Strategic advantages that make Paraguay the ideal location for your data center infrastructure.
                 </p>
               </div>
             </div>
+          </div>
+
+          {/* Desktop Two-Column Layout */}
+          <div className="hidden md:flex gap-12 items-start pt-8">
+            {/* Left Column - Spacer */}
+            <div className="w-2/5"></div>
             
             {/* Right Column - Cards */}
             <div className="w-3/5">
